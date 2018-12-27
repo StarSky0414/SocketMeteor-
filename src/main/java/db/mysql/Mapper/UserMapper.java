@@ -1,4 +1,4 @@
-package db.mysql;
+package db.mysql.Mapper;
 
 import db.mysql.entity.UserFollowEntity;
 import org.apache.ibatis.annotations.Mapper;

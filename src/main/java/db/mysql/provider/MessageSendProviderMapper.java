@@ -1,17 +1,8 @@
 package db.mysql.provider;
 
-import db.mysql.MessageSendMapper;
-import db.mysql.MysqlBase;
-import org.apache.ibatis.session.SqlSession;
+import db.mysql.Mapper.MessageSendMapper;
 
-public class MessageSendProviderMapper {
-
-    private final SqlSession mysqlBaseSession;
-
-    public MessageSendProviderMapper(){
-        MysqlBase mysqlBase = MysqlBase.getMysqlBase();
-        mysqlBaseSession = mysqlBase.getSession();
-    }
+public class MessageSendProviderMapper extends MysqlProviderBase {
 
     public void insertTextMessage(String sendUserId,String receiveUserid,String messageContent){
         MessageSendMapper messageSendMapper = mysqlBaseSession.getMapper(MessageSendMapper.class);

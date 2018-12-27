@@ -3,6 +3,7 @@ package controller;
 import bean.AdapterResponseBean;
 import bean.SyncMessageRequestBean;
 import com.alibaba.fastjson.JSONObject;
+import db.mysql.MysqlBase;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ class SyncMessageRequestBeanTest {
     }
 
     static void init(){
+        MysqlBase.init();
         syncMessage = new SyncMessage();
         SyncMessageRequestBean syncMessageRequestBean = new SyncMessageRequestBean("1","0");
 
