@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TrendsSyncProviderBaseMapper extends MysqlProviderBase {
 
-    List<TrendsEntity> syncTrendsContent(String id){
+    public List<TrendsEntity> syncTrendsContent(String id){
         TrendsSyncMapper trendsSyncMapper = mysqlBaseSession.getMapper(TrendsSyncMapper.class);
         List<TrendsEntity> trendsEntities = trendsSyncMapper.queryTrends(id);
         mysqlBaseSession.commit();

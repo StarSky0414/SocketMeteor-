@@ -5,7 +5,7 @@ import db.mysql.entity.TrendsEntity;
 
 public class TrendsSendProviderMapper extends MysqlProviderBase{
 
-    void sendTrendsContent(TrendsEntity trendsEntity){
+    public void sendTrendsContent(TrendsEntity trendsEntity){
         TrendsSendMapper trendsSendMapper = mysqlBaseSession.getMapper(TrendsSendMapper.class);
         String sendUserId = trendsEntity.getSendUserId();
         String content = trendsEntity.getContent();

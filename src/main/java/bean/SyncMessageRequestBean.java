@@ -2,7 +2,7 @@ package bean;
 
 /**
  *  【用户请求】 JSON Bean 使用
- *  用于消息请求同步
+ *  用于 聊天消息 请求同步
  */
 public class SyncMessageRequestBean {
     // 用户id
