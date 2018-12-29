@@ -37,7 +37,7 @@ public class ConnectManager implements Runnable {
                 AdapterRequestBean adapterRequestBean = distribute.resolvePackage(inputStream);
                 adapterResponseBean = distribute.toDistribute(adapterRequestBean);
             }
-            safe.insertSession(outputStream,userId);
+//            safe.insertSession(outputStream,userId);
             distribute.toEncapsulation(outputStream,adapterResponseBean);
             closeClient();
         } catch (IOException e) {

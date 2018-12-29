@@ -1,5 +1,7 @@
 package bean;
 
+import java.io.UnsupportedEncodingException;
+
 public class AdapterResponseBean {
 
     // 用户 id
@@ -29,7 +31,12 @@ public class AdapterResponseBean {
     }
 
     public String getJsonString() {
-        return jsonString;
+        try {
+            return new String(jsonString.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override

@@ -3,6 +3,7 @@ package adapter;
 import bean.AdapterRequestBean;
 import bean.AdapterResponseBean;
 import controller.AdapterI;
+import safeproving.Safe;
 import utiles.Conversion;
 
 import java.io.*;
@@ -14,8 +15,7 @@ public class Distribute {
 
     /**
      * 分发，根据分发路径，创建实体对象
-     * @param aClassName 分发路径，并非class路径
-     * @param jsonString json数据
+     * @param adapterRequestBean 分发路径，并非class路径
      * @return 回应的json数据
      */
     public AdapterResponseBean toDistribute(AdapterRequestBean adapterRequestBean) {
@@ -89,21 +89,33 @@ public class Distribute {
     public void toEncapsulation(OutputStream outputStream, AdapterResponseBean adapterResponseBean) throws IOException {
 
         String jsonString = adapterResponseBean.getJsonString();
-        String pathString = adapterResponseBean.getPath();
+//        String pathString = adapterResponseBean.getPath();
 //        byte[] obligateBytes = new byte[20];
-        int packLength = jsonString.length();
-        int pathLength = pathString.length();
+        int packLength = jsonString.getBytes("utf-8").length;
+//        int pathLength = pathString.length();
 
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
-        byte[] packLengthByte = Conversion.intToByteArray(packLength);
-        byte[] pathLengthByte = Conversion.intToByteArray(pathLength);
+        Safe safe = new Safe();
+        safe.insertSession(outputStream,"1");
+//        Integer integer = new Integer(13);
+//        byte[] packLengthByte = Conversion.intToByteArray(packLength);
+        byte[] packLengthByte = String.format("%08d",packLength).getBytes();
+//        byte[] bytes ={0,0,0,0};
 
-//        dataOutputStream.write(obligateBytes);
-        dataOutputStream.write(pathLengthByte);
-        dataOutputStream.write(pathString.getBytes());
+//
+//        for (int i=packLengthByte.length-1;i>=0;i--){
+//            System.out.println("+++++++++++++++++++++++"+i);
+//                bytes[i] = packLengthByte[i];
+//        }
+//        byte[] pathLengthByte = Conversion.intToByteArray(pathLength);
+        System.out.println("packLength: "+packLength);
+        System.out.println("packLengthByte: "+new String(packLengthByte));
+        System.out.println("packLengthInt: "+Integer.valueOf(new String(packLengthByte)));
         dataOutputStream.write(packLengthByte);
         dataOutputStream.write(jsonString.getBytes());
+//        dataOutputStream.write(packLengthByte);
+//        dataOutputStream.write(jsonString.getBytes());
         dataOutputStream.flush();
     }
 
