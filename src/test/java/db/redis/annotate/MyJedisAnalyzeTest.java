@@ -23,7 +23,7 @@ class MyJedisAnalyzeTest {
     @Test
     void testJedisList() {
         HashMap<UserInfoEnum, String> userInfoEnumStringHashMap = new HashMap<UserInfoEnum, String>();
-        userInfoEnumStringHashMap.put(UserInfoEnum.MESSAGEED_ID, "333");
+        userInfoEnumStringHashMap.put(UserInfoEnum.MESSAGEED_ID, "");
         MyJedisAnalyze myJedisAnalyze = new MyJedisAnalyze();
 
         myJedisAnalyze.jedisList(FunctionEnum.USERINFO, "123456", RedisDataBasicOperation.UPDATE, userInfoEnumStringHashMap);
