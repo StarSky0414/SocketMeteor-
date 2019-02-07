@@ -6,6 +6,8 @@
 
 <mapper namespace="trends">
 
+    <!--sql 基础-->
+
     <sql id="trendsSqlBase">
         SELECT id,send_user_id,content FROM trends
     </sql>
@@ -14,10 +16,12 @@
         limit 0,5
     </sql>
 
+    <!--  查询 start  -->
     <select id="trendsSelectBase" parameterType="TrendsEntity" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
     </select>
 
+    <!--test使用，无实际意义-->
     <resultMap id="trendsMap" type="TrendsEntity">
         <id column="id"  property="id"/>
         <result column="send_user_id" property="send_user_id"/>
@@ -32,7 +36,33 @@
         <include refid="trendsSqlLimit"/>
     </select>
 
-    <insert id="insertTrends" parameterMap="TrendsEntity" keyColumn="id" keyProperty=""></insert>
+    <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
 
+    </select>
+    <!--  查询  end  -->
 
+    <!--  创建  start  -->
+    <insert id="insertTrends" parameterType="TrendsEntity"  useGeneratedKeys="true" keyProperty="id">
+        insert into trends ( send_user_id , content , photo_url ) values ( #{send_user_id} , #{content} , #{photo_url});
+    </insert>
+    <!--  创建  end-->
+
+    <!--  更新  start-->
+    <update id="updateTrends" parameterType="TrendsEntity">
+        update trends set id = #{id}
+        <if test="send_user_id != null">
+            , content = #{content}
+        </if>
+        <if test="send_user_id != null">
+            , photo_url = #{photo_url}
+        </if>
+        where id=#{id};
+    </update>
+    <!--  更新  end  -->
+
+    <!--  删除  start  -->
+    <delete id="deleteTrends"  parameterType="java.lang.String">
+        delete from trends where id = #{_parameter}
+    </delete>
+    <!--  删除  end  -->
 </mapper>

@@ -15,4 +15,21 @@ class TrendsSendProviderMapperTest {
         TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
         trendsSendProviderMapper.sendTrendsContent(trendsEntity);
     }
+
+    @Test
+    void testupdateTrendsContent(){
+        MysqlBase.init();
+        TrendsEntity trendsEntity = new TrendsEntity("4", "测试内容4", "url://xxxxx.xxxx.xxxx");
+        trendsEntity.setId(3);
+        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
+        trendsSendProviderMapper.updateTrendsContent(trendsEntity);
+    }
+
+    @Test
+    void testDeleteTrendsContent(){
+        MysqlBase.init();
+        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
+        trendsSendProviderMapper.deleteTrendsContent("3");
+    }
+
 }
