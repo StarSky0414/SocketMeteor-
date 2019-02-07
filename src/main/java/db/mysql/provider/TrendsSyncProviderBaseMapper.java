@@ -2,10 +2,14 @@ package db.mysql.provider;
 
 import db.mysql.Mapper.TrendsSyncMapper;
 import db.mysql.entity.TrendsEntity;
+import org.apache.ibatis.logging.Log;
+import org.apache.ibatis.logging.LogFactory;
 
 import java.util.List;
 
 public class TrendsSyncProviderBaseMapper extends MysqlProviderBase {
+
+    private static Log logger = LogFactory.getLog(TrendsSyncProviderBaseMapper.class);
 
     public List<TrendsEntity> syncTrendsContent(String id){
         TrendsSyncMapper trendsSyncMapper = mysqlBaseSession.getMapper(TrendsSyncMapper.class);
@@ -14,5 +18,28 @@ public class TrendsSyncProviderBaseMapper extends MysqlProviderBase {
         mysqlBaseSession.close();
         return trendsEntities;
     }
+
+    /**
+     *  更新所有动态消息
+     *  对应手机动态下拉刷新
+     * @return 动态列表 长度5
+     */
+    public List<TrendsEntity> flushTrends(){
+        List<TrendsEntity> trendsEnterList = mysqlBaseSession.selectList("trends.showTrends");
+        return  trendsEnterList;
+    }
+
+
+    /**
+     *  更新后边动态消息
+     *  对应手机动态上拉刷新
+     * @return 动态列表 长度5
+     */
+    public  List<TrendsEntity> showMoreTrends(String appTrendsMessage){
+        List<TrendsEntity> trendsEnterList = mysqlBaseSession.selectList("trends.showTrends", appTrendsMessage);
+        return trendsEnterList;
+    }
+
+
 
 }

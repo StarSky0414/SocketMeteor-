@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -28,13 +29,16 @@ public class MysqlBaseTest {
         MysqlBase mysqlBase = MysqlBase.getMysqlBase();
         SqlSession session = mysqlBase.getSession();
 
-//        TrendsEntity trendsEntity1 = new TrendsEntity();
-//        trendsEntity1.setId(1);
+        TrendsEntity trendsEntity1 = new TrendsEntity();
+        trendsEntity1.setId(10);
 //        trendsEntity1.setUrl("url://xxxxx.xxxx.xxxx");
 
-        Map<String,TrendsEntity> trendsEntityMap = session.selectMap("trends.queryById","id");
-        for(HashMap.Entry trendsEntity : trendsEntityMap.entrySet()){
-            System.out.println("key: "+trendsEntity.getKey() +"      value"+trendsEntity.getValue());
+        List<TrendsEntity> trendsEntityMap = session.selectList("trends.trendsAll",trendsEntity1);
+//        for(HashMap.Entry trendsEntity : trendsEntityMap.entrySet()){
+//            System.out.println("key: "+trendsEntity.getKey() +"      value"+trendsEntity.getValue());
+//        }
+        for (TrendsEntity trendsEntity: trendsEntityMap){
+            System.out.println(trendsEntity.toString());
         }
     }
 

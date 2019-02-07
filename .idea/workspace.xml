@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" line="34" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="83088241-b61b-47d8-96d9-e6ea461a15ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="83088241-b61b-47d8-96d9-e6ea461a15ce" name="Default" comment="[修改] pox配置 增加配置文件复制">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/mysql/MysqlBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/mysql/MysqlBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/mysql/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/adapter/mapping.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/Mapper/trends_mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/MysqlBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/MysqlBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/Mapper/trends_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/Mapper/trends_mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/provider/TrendsSyncProviderBaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/provider/TrendsSyncProviderBaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/db/mysql/MysqlBaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/db/mysql/MysqlBaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/db/mysql/provider/TrendsSyncProviderBaseMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/db/mysql/provider/TrendsSyncProviderBaseMapperTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,16 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/StartServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/MysqlBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="36" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -90,17 +81,78 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="152">
+              <caret line="23" selection-start-line="23" selection-end-line="42" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="332">
+              <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+              <folding>
+                <element signature="e#1110#1114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSendProviderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="44" column="89" selection-start-line="44" selection-start-column="89" selection-end-line="44" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/entity/TrendsEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#993#994#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1125#1126#0" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,14 +186,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/db/redis/annotate/MyJedisAnalyze.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/MessageBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/MessageSendMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/MessageSyncMapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/db/mysql/provider/MessageSyncProviderMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SynUserFriendController.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/TrendsSyncMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/TrendsSyncMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/TrendsSendMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/IMysqlProvider.java" />
@@ -150,12 +199,9 @@
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/MessageSendProviderMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/MessageSyncProviderMapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSendProviderMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/entity/TrendsEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/bean/SyncMessageRequestBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/bean/SyncTrendsBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SyncMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSendProviderMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SyncTrendsController.java" />
         <option value="$PROJECT_DIR$/src/test/java/controller/ControllerInit.java" />
@@ -185,6 +231,12 @@
         <option value="$PROJECT_DIR$/../skstmeteor/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/StartServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/mysql/MysqlBase.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/entity/TrendsEntity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
       </list>
     </option>
   </component>
@@ -274,7 +326,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SocketMeteor-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SocketMeteor-" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
               <item name="Mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SocketMeteor-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SocketMeteor-" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SocketMeteor-" type="b2602c69:ProjectViewProjectNode" />
@@ -340,7 +412,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549517954445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549523245146" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
@@ -352,7 +424,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4045977" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -397,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MysqlBaseTest.testMyBatisXmlUsed">
+  <component name="RunManager" selected="JUnit.TrendsSyncProviderBaseMapperTest.testShowMoreTrends">
     <configuration name="StartServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -409,23 +481,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MessageSendProviderMapperTest.testInsertTextMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skstmeteor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="db.mysql.provider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="db.mysql.provider" />
-      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.MessageSendProviderMapperTest" />
-      <option name="METHOD_NAME" value="testInsertTextMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -484,6 +539,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TrendsSyncProviderBaseMapperTest.testFlushTrends" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SocketMeteor-" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="db.mysql.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="db.mysql.provider" />
+      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.TrendsSyncProviderBaseMapperTest" />
+      <option name="METHOD_NAME" value="testFlushTrends" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SocketMeteor-" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="db.mysql.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="db.mysql.provider" />
+      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.TrendsSyncProviderBaseMapperTest" />
+      <option name="METHOD_NAME" value="testShowMoreTrends" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -503,15 +592,17 @@
       <item itemvalue="Application.StartServer" />
       <item itemvalue="JUnit.MysqlBaseTest.testMyBatisXmlUsed" />
       <item itemvalue="JUnit.MessageTest.messageSend" />
-      <item itemvalue="JUnit.MessageSendProviderMapperTest.testInsertTextMessage" />
       <item itemvalue="JUnit.MessageSyncProviderMapperTest.queryTextMessage" />
+      <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest.testFlushTrends" />
+      <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest.testShowMoreTrends" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest.testShowMoreTrends" />
+        <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest.testFlushTrends" />
         <item itemvalue="Application.StartServer" />
         <item itemvalue="JUnit.MessageSyncProviderMapperTest.queryTextMessage" />
         <item itemvalue="JUnit.MessageTest.messageSend" />
-        <item itemvalue="JUnit.MessageSendProviderMapperTest.testInsertTextMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -537,38 +628,46 @@
       <workItem from="1547129002769" duration="7353000" />
       <workItem from="1548583257743" duration="10429000" />
     </task>
+    <task id="LOCAL-00001" summary="[修改] pox配置 增加配置文件复制">
+      <created>1549518085360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549518085360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 12m 43s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 14h 56m 14s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 13m 12s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 14h 59m 48s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 21m 48s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 00m 15s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 23m 13s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 00m 50s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 33m 43s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 01m 17s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 35m 22s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 01m 40s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 35m 31s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 02m 09s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 35m 49s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 02m 58s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 40m 25s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 03m 19s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MysqlBaseTest_testMyBatisXmlUsed - 2019.02.06 at 22h 41m 07s.xml">
-      <configuration name="MysqlBaseTest.testMyBatisXmlUsed" configurationId="JUnit" />
+    <history-entry file="TrendsSyncProviderBaseMapperTest_testShowMoreTrends - 2019.02.07 at 15h 04m 13s.xml">
+      <configuration name="TrendsSyncProviderBaseMapperTest.testShowMoreTrends" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -600,7 +699,7 @@
       <window_info anchor="bottom" id="Messages" order="3" weight="0.2510699" />
       <window_info anchor="bottom" id="REST Client" order="4" sideWeight="0.49865952" weight="0.2735043" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3290461" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32905984" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3281027" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.4074074" />
@@ -608,54 +707,25 @@
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32905984" />
       <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.49410504" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="PlantUML" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="3" weight="0.16085792" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="PlantUML" order="1" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="4" weight="0.16085792" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7940447" weight="0.22050938" />
-      <window_info id="Structure" order="1" sideWeight="0.20493828" side_tool="true" weight="0.24463807" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.5014245" side_tool="true" weight="0.21447721" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.4122682" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5013405" side_tool="true" weight="0.3666191" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.2510699" />
-      <window_info anchor="bottom" id="REST Client" order="4" sideWeight="0.49865952" weight="0.2735043" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32905984" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.3281027" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.4074074" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32905984" />
-      <window_info active="true" anchor="bottom" id="Run" order="13" visible="true" weight="0.52924395" />
-      <window_info anchor="right" id="PlantUML" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="3" weight="0.16085792" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[修改] pox配置 增加配置文件复制" />
+    <option name="LAST_COMMIT_MESSAGE" value="[修改] pox配置 增加配置文件复制" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,13 +788,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/utiles/Conversion.java" />
-    <entry file="das://99313b95-03c1-4a12-af55-888b51b387ac/schema/meteor/table/user_chat_message.sql" />
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java" />
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectListener.java" />
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/MessageController.java" />
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/AdapterI.java" />
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncMessage.java" />
     <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/annotate/MyJedisAnalyze.java" />
     <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/redis/annotate/MyJedisAnalyzeTest.java" />
     <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendTrendsController.java" />
@@ -771,31 +834,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="26" column="54" lean-forward="true" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/db/mysql/MysqlBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="60" lean-forward="true" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StartServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/MysqlBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="210">
+          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/MysqlProviderBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/db/mysql/MysqlBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="152">
+          <caret line="23" selection-start-line="23" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/entity/TrendsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="450">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="44" column="89" selection-start-line="44" selection-start-column="89" selection-end-line="44" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSendProviderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+          <folding>
+            <element signature="e#1110#1114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
