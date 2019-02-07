@@ -18,7 +18,7 @@ public class MysqlBase extends ClassLoader {
      *  初始化数据库 读取 MyBatis 配置文件
      */
     public static void init() {
-        String resource = "db\\mysql\\mybatis-config.xml";
+        String resource = "mybatis-config.xml";
         InputStream inputStream = null;
         try {
             inputStream = Resources.getResourceAsStream(resource);

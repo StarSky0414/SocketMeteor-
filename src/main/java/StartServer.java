@@ -28,7 +28,7 @@ public class StartServer {
 //            InputStream inputStream = socket.getInputStream();
 //            String result = new BufferedReader(new InputStreamReader(inputStream)).readLine();
 //            System.out.println(result);
-//            socket.shutdownInput();
+//            socket.shutdownInput();S
 //            socket.close();
 //            System.out.println(socket.isClosed());
 ////            Thread.sleep(1000);
