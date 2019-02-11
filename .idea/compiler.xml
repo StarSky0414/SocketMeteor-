@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="skst-meteor" />
         <module name="skstmeteor" />
         <module name="SocketMeteor-" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="skst-meteor" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

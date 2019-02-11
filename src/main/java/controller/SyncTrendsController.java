@@ -18,12 +18,17 @@ public class SyncTrendsController extends AdapterI{
 
     @Override
     public AdapterResponseBean getAdapterResponse() {
-        SyncTrendsBean syncTrendsBean = resolveJson();
-        String locatTrendsId = syncTrendsBean.getLocatTrendsId();
-        TrendsSyncProviderBaseMapper trendsSyncProviderBaseMapper = new TrendsSyncProviderBaseMapper();
-        List<TrendsEntity> trendsEntities = trendsSyncProviderBaseMapper.syncTrendsContent(locatTrendsId);
-        String s = JSONObject.toJSONString(trendsEntities);
-        AdapterResponseBean adapterResponseBean = new AdapterResponseBean("1", s);
-        return adapterResponseBean;
+        return null;
     }
+
+//    @Override
+//    public AdapterResponseBean getAdapterResponse() {
+//        SyncTrendsBean syncTrendsBean = resolveJson();
+//        String locatTrendsId = syncTrendsBean.getLocatTrendsId();
+//        TrendsSyncProviderBaseMapper trendsSyncProviderBaseMapper = new TrendsSyncProviderBaseMapper();
+//        List<TrendsEntity> trendsEntities = trendsSyncProviderBaseMapper.syncTrendsContent(locatTrendsId);
+//        String s = JSONObject.toJSONString(trendsEntities);
+//        AdapterResponseBean adapterResponseBean = new AdapterResponseBean("1", s);
+//        return adapterResponseBean;
+//    }
 }

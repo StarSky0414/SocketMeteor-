@@ -10,4 +10,9 @@ public abstract class MysqlProviderBase {
         MysqlBase mysqlBase = MysqlBase.getMysqlBase();
         mysqlBaseSession = mysqlBase.getSession();
     }
+
+    protected void commit(){
+        mysqlBaseSession.commit();
+        mysqlBaseSession.close();
+    }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+        >
+
+<!--  entityName UserInfoEntity  -->
+
+<mapper namespace="userInfo">
+
+    <!--select start-->
+    <select id="userInfoQuery" parameterType="java.lang.String" resultType="UserInfoEntity">
+        SELECT id AS id ,
+         user_phone as userPhone ,
+         user_password as passWord ,
+         user_nickname as nickname ,
+         user_head_link as photoUser ,
+         user_sex as sex ,
+         user_constellation as constellation
+         FROM user_info where id = #{id}
+    </select>
+    <!--select end-->
+
+    <!--  插入 start  -->
+    <insert id="userInfoInit" parameterType="UserInfoEntity" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO user_info ( user_phone, user_password ) VALUES ( #{userPhone} ,#{passWord});
+    </insert>
+    <!--  插入  end  -->
+
+    <!--  update  start  -->
+    <update id="userInfoOther" parameterType="UserInfoEntity">
+        UPDATE user_info SET id = #{id}
+        <if test="nickName !=null &amp;&amp; nickName != &quot;&quot;">
+            , user_nickname = #{nickName}
+        </if>
+        <if test="photoUser !=null &amp;&amp; photoUser != &quot;&quot;">
+            , user_head_link = #{photoUser}
+        </if>
+        <if test="constellation !=null &amp;&amp; constellation != &quot;&quot;">
+            , user_constellation = #{constellation}
+        </if>
+        <if test="sex !=null &amp;&amp; sex != &quot;&quot;">
+            , user_sex = #{sex};
+        </if>
+        where id = #{id}
+    </update>
+    <!--  update  end  -->
+
+
+    
+</mapper>

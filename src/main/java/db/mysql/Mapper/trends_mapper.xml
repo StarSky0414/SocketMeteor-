@@ -37,7 +37,8 @@
     </select>
 
     <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
-
+        <include refid="trendsSqlBase"/>
+        where send_user_id = #{userId}
     </select>
     <!--  查询  end  -->
 

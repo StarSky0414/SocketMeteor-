@@ -1,5 +1,9 @@
 package db.mysql.entity;
 
+
+/**
+ * 动态实体类
+ */
 public class TrendsEntity {
 
     // 消息id
