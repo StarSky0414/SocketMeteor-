@@ -2,12 +2,17 @@ package adapter;
 
 import bean.AdapterRequestBean;
 import bean.AdapterResponseBean;
+import bean.SendTrendsBean;
 import controller.AdapterI;
+import controller.SendTrendsController;
 import safeproving.Safe;
 import utiles.Conversion;
 
 import java.io.*;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 
 public class Distribute {
@@ -15,17 +20,21 @@ public class Distribute {
 
     /**
      * 分发，根据分发路径，创建实体对象
+     *
      * @param adapterRequestBean 分发路径，并非class路径
      * @return 回应的json数据
      */
     public AdapterResponseBean toDistribute(AdapterRequestBean adapterRequestBean) {
-        String aClassName = adapterRequestBean.getPathString();
+        String[] path = adapterRequestBean.getPathString().split(":");
+        String aClassName = path[0];
+        String modeName = path[1];
         String jsonString = adapterRequestBean.getJsonString();
         AdapterResponseBean adapterResponseBean = null;
         try {
             Class<?> cls = Class.forName(mappingLoading.getMyClass(aClassName));
             Constructor<?> cons = cls.getConstructor();
             AdapterI adapterI = (AdapterI) cons.newInstance();
+            callMethodAnnotate(adapterI,modeName);
             adapterI.setAdapterResponseBean(jsonString);
             adapterResponseBean = adapterI.getAdapterResponse();
         } catch (Exception e) {
@@ -33,6 +42,26 @@ public class Distribute {
         }
         System.out.println("echoJsonString: " + adapterResponseBean.getJsonString());
         return adapterResponseBean;
+    }
+
+    public void callMethodAnnotate(AdapterI adapterI , String methodName){
+        Method[] declaredMethods = adapterI.getClass().getDeclaredMethods();
+        for (Method method : declaredMethods){
+            MethodName methodAnnotation = method.getAnnotation(MethodName.class);
+//            System.out.println("callMethodAnnotate:"+methodAnnotation);
+            if (methodAnnotation != null && methodAnnotation.methodName().equals(methodName)){
+                System.out.println(methodAnnotation.toString());
+                try {
+                    method.invoke(adapterI);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+        }
+
     }
 
 
@@ -68,7 +97,7 @@ public class Distribute {
         //读取数据json
         int read = dataInputStream.read(messageBodyByte, 0, i);
 
-        String jsonString = new String(messageBodyByte,"utf-8");
+        String jsonString = new String(messageBodyByte, "utf-8");
         String pathString = new String(pathBytes);
         String messageBodyString = new String(messageBodyByte);
         AdapterRequestBean adapterRequestBean = new AdapterRequestBean(pathString, messageBodyString);
@@ -82,8 +111,8 @@ public class Distribute {
      * 将json 进行数据封装
      * 封装格式 预留位置【20】 分发位置长度【4】  分发位置【20】 数据包长度【4】 json【数据包实际数值】
      *
-     * @param adapterResponseBean   服务器返回json
-     * @param outputStream client输出流
+     * @param adapterResponseBean 服务器返回json
+     * @param outputStream        client输出流
      * @throws IOException
      */
     public void toEncapsulation(OutputStream outputStream, AdapterResponseBean adapterResponseBean) throws IOException {
@@ -97,10 +126,10 @@ public class Distribute {
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
         Safe safe = new Safe();
-        safe.insertSession(outputStream,"1");
+        safe.insertSession(outputStream, "1");
 //        Integer integer = new Integer(13);
 //        byte[] packLengthByte = Conversion.intToByteArray(packLength);
-        byte[] packLengthByte = String.format("%08d",packLength).getBytes();
+        byte[] packLengthByte = String.format("%08d", packLength).getBytes();
 //        byte[] bytes ={0,0,0,0};
 
 //
@@ -109,9 +138,9 @@ public class Distribute {
 //                bytes[i] = packLengthByte[i];
 //        }
 //        byte[] pathLengthByte = Conversion.intToByteArray(pathLength);
-        System.out.println("packLength: "+packLength);
-        System.out.println("packLengthByte: "+new String(packLengthByte));
-        System.out.println("packLengthInt: "+Integer.valueOf(new String(packLengthByte)));
+        System.out.println("packLength: " + packLength);
+        System.out.println("packLengthByte: " + new String(packLengthByte));
+        System.out.println("packLengthInt: " + Integer.valueOf(new String(packLengthByte)));
         dataOutputStream.write(packLengthByte);
         dataOutputStream.write(jsonString.getBytes());
 //        dataOutputStream.write(packLengthByte);
