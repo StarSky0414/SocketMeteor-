@@ -2,17 +2,29 @@ package bean;
 
 public class SendTrendsBean {
 
+    // 动态id
+    private int id ;
     // 发送用户id
     private String sendUserId;
     // 动态内容
     private String content;
     // 动态图片网址
-    private String photoUrl;
+    private String url;
 
-    public SendTrendsBean(String sendUserId, String content, String photoUrl) {
+
+    public SendTrendsBean(String sendUserId, String content, String url) {
+        this.id = id;
         this.sendUserId = sendUserId;
         this.content = content;
-        this.photoUrl = photoUrl;
+        this.url = url;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSendUserId() {
@@ -31,20 +43,21 @@ public class SendTrendsBean {
         this.content = content;
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
     public String toString() {
         return "SendTrendsBean{" +
-                "sendUserId='" + sendUserId + '\'' +
+                "id='" + id + '\'' +
+                ", sendUserId='" + sendUserId + '\'' +
                 ", content='" + content + '\'' +
-                ", photoUrl='" + photoUrl + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

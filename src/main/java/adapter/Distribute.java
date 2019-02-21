@@ -20,7 +20,6 @@ public class Distribute {
 
     /**
      * 分发，根据分发路径，创建实体对象
-     *
      * @param adapterRequestBean 分发路径，并非class路径
      * @return 回应的json数据
      */
@@ -34,8 +33,8 @@ public class Distribute {
             Class<?> cls = Class.forName(mappingLoading.getMyClass(aClassName));
             Constructor<?> cons = cls.getConstructor();
             AdapterI adapterI = (AdapterI) cons.newInstance();
-            callMethodAnnotate(adapterI,modeName);
             adapterI.setAdapterResponseBean(jsonString);
+            callMethodAnnotate(adapterI,modeName);
             adapterResponseBean = adapterI.getAdapterResponse();
         } catch (Exception e) {
             e.printStackTrace();
@@ -44,6 +43,11 @@ public class Distribute {
         return adapterResponseBean;
     }
 
+    /**
+     *  根据 注解获取要映射的method
+     * @param adapterI 被映射的实体类
+     * @param methodName 注解methodName="XXXXXX"
+     */
     public void callMethodAnnotate(AdapterI adapterI , String methodName){
         Method[] declaredMethods = adapterI.getClass().getDeclaredMethods();
         for (Method method : declaredMethods){
@@ -61,7 +65,6 @@ public class Distribute {
                 return;
             }
         }
-
     }
 
 

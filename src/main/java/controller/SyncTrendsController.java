@@ -1,5 +1,6 @@
 package controller;
 
+import adapter.MethodName;
 import bean.AdapterResponseBean;
 import bean.SyncMessageRequestBean;
 import bean.SyncTrendsBean;
@@ -11,6 +12,8 @@ import java.util.List;
 
 public class SyncTrendsController extends AdapterI{
 
+    private List<TrendsEntity> trendsEntities;
+
     private SyncTrendsBean resolveJson(){
         SyncTrendsBean syncTrendsBean = JSONObject.parseObject(json, SyncTrendsBean.class);
         return syncTrendsBean;
@@ -18,17 +21,17 @@ public class SyncTrendsController extends AdapterI{
 
     @Override
     public AdapterResponseBean getAdapterResponse() {
-        return null;
+        String trendsEntitiesJson = JSONObject.toJSONString(trendsEntities);
+        AdapterResponseBean adapterResponseBean = new AdapterResponseBean(null,trendsEntitiesJson);
+        return adapterResponseBean;
     }
 
-//    @Override
-//    public AdapterResponseBean getAdapterResponse() {
-//        SyncTrendsBean syncTrendsBean = resolveJson();
-//        String locatTrendsId = syncTrendsBean.getLocatTrendsId();
-//        TrendsSyncProviderBaseMapper trendsSyncProviderBaseMapper = new TrendsSyncProviderBaseMapper();
-//        List<TrendsEntity> trendsEntities = trendsSyncProviderBaseMapper.syncTrendsContent(locatTrendsId);
-//        String s = JSONObject.toJSONString(trendsEntities);
-//        AdapterResponseBean adapterResponseBean = new AdapterResponseBean("1", s);
-//        return adapterResponseBean;
-//    }
+    /**
+     * 下拉刷新
+     */
+    @MethodName(methodName="getAllTrends")
+    public void getAllTrends(){
+        TrendsSyncProviderBaseMapper trendsSyncProviderBaseMapper = new TrendsSyncProviderBaseMapper();
+        trendsEntities = trendsSyncProviderBaseMapper.flushTrends();
+    }
 }

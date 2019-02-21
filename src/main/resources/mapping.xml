@@ -5,6 +5,5 @@
     <safe  class="controller.SafeController"/>
     <testpath class="controller.SafeController"/>
     <requestNewMessageList class="controller.SyncMessage"/>
-    <trendsSend class="controller.SendTrendsController"/>
-    <trendsSync class="controller.SyncTrendsController"/>
+    <trends class="controller.SendTrendsController"/>
 </package>

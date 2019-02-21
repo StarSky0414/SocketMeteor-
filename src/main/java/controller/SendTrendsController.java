@@ -8,37 +8,52 @@ import db.mysql.entity.TrendsEntity;
 import db.mysql.provider.TrendsSendProviderMapper;
 
 public class SendTrendsController extends AdapterI{
+
+
     private SendTrendsBean resolveJson(){
         SendTrendsBean syncTrendsBean = JSONObject.parseObject(json, SendTrendsBean.class);
+        System.out.println("syncTrendsBean: "+syncTrendsBean.toString());
         return syncTrendsBean;
     }
 
+    private String path;
+    private String state;
+
     @Override
     public AdapterResponseBean getAdapterResponse() {
-        SendTrendsBean sendTrendsBean = resolveJson();
-        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
-//        TrendsEntity trendsEntity = sendTrendsBeanToTrendsEntity(sendTrendsBean);
-//        trendsSendProviderMapper.sendTrendsContent(trendsEntity);
-//        String s = "{\"stat\":1}";
-//        AdapterResponseBean adapterResponseBean = new AdapterResponseBean("1", s);
+        System.out.println("SendTrendsController: json"+json);
 
-        TrendsEntity trendsEntity = new TrendsEntity(sendTrendsBean.getSendUserId(),sendTrendsBean.getContent(),sendTrendsBean.getPhotoUrl());
-        int i = trendsSendProviderMapper.sendTrendsContent(trendsEntity);
-        String state = i == 1?SUCCESS_SIGN:FAIL_SIGN;
         AdapterResponseBean adapterResponseBean = new AdapterResponseBean(null, state);
         return adapterResponseBean;
     }
 
 
-    @MethodName(methodName="testMethod")
-    public void createTrends(){
-        System.out.println("This is createTrends");
-        try {
-            Thread.sleep(Long.parseLong("5000"));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Sleep is Over");
+    @MethodName(methodName="createTrend")
+    public void createTrend(){
+        SendTrendsBean sendTrendsBean = resolveJson();
+        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
+        TrendsEntity trendsEntity = new TrendsEntity(sendTrendsBean.getSendUserId(),sendTrendsBean.getContent(),sendTrendsBean.getUrl());
+        int i = trendsSendProviderMapper.sendTrendsContent(trendsEntity);
+        state = i == 1?SUCCESS_SIGN:FAIL_SIGN;
     }
+
+    @MethodName(methodName = "updateTrend")
+    public void updateTrend(){
+        SendTrendsBean sendTrendsBean = resolveJson();
+        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
+        TrendsEntity trendsEntity = new TrendsEntity(sendTrendsBean.getSendUserId(), sendTrendsBean.getContent(), sendTrendsBean.getUrl());
+        int i = trendsSendProviderMapper.updateTrendsContent(trendsEntity);
+        state = i == 1?SUCCESS_SIGN:FAIL_SIGN;
+    }
+
+    @MethodName(methodName = "deleteTrend")
+    public void deleteTrend(){
+        SendTrendsBean sendTrendsBean = resolveJson();
+        TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
+        TrendsEntity trendsEntity = new TrendsEntity();
+        trendsEntity.setId(sendTrendsBean.getId());
+        int i = trendsSendProviderMapper.updateTrendsContent(trendsEntity);
+        state = i == 1?SUCCESS_SIGN:FAIL_SIGN;
+    }
+
 }

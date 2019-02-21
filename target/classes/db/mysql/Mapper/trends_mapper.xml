@@ -9,7 +9,7 @@
     <!--sql 基础-->
 
     <sql id="trendsSqlBase">
-        SELECT id,send_user_id,content FROM trends
+        SELECT id,send_user_id,content,photo_url,create_time FROM trends
     </sql>
     
     <sql id="trendsSqlLimit">
@@ -33,6 +33,7 @@
             <if test="_parameter  != null  &amp;&amp;  _parameter != &quot;&quot; ">
                 where id &lt; #{appTrendsMessage}
             </if>
+            ORDER BY id DESC
         <include refid="trendsSqlLimit"/>
     </select>
 
@@ -51,10 +52,10 @@
     <!--  更新  start-->
     <update id="updateTrends" parameterType="TrendsEntity">
         update trends set id = #{id}
-        <if test="send_user_id != null">
+        <if test="content != null">
             , content = #{content}
         </if>
-        <if test="send_user_id != null">
+        <if test="photo_url != null">
             , photo_url = #{photo_url}
         </if>
         where id=#{id};
