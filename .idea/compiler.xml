@@ -12,7 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="skst-meteor" target="8" />
+      <module name="skst-meteor" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

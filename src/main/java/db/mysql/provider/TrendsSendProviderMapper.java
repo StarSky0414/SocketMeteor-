@@ -28,10 +28,12 @@ public class TrendsSendProviderMapper extends MysqlProviderBase{
         return update;
     }
 
-    public void deleteTrendsContent(String id){
-        mysqlBaseSession.update("trends.deleteTrends",id);
+    public int deleteTrendsContent(String id){
+        System.out.println("id : "+id);
+        int update = mysqlBaseSession.update("trends.deleteTrends",id);
         mysqlBaseSession.commit();
         mysqlBaseSession.close();
+        return update;
     }
 
 }

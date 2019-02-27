@@ -9,7 +9,7 @@
     <!--sql 基础-->
 
     <sql id="trendsSqlBase">
-        SELECT id,send_user_id,content,photo_url,create_time FROM trends
+        SELECT id,send_user_id,content,photo_url,create_time FROM trends where dele_sign = 0
     </sql>
     
     <sql id="trendsSqlLimit">
@@ -31,7 +31,7 @@
     <select id="showTrends" parameterType="java.lang.String" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
             <if test="_parameter  != null  &amp;&amp;  _parameter != &quot;&quot; ">
-                where id &lt; #{appTrendsMessage}
+                and id &lt; #{appTrendsMessage}
             </if>
             ORDER BY id DESC
         <include refid="trendsSqlLimit"/>
@@ -39,7 +39,9 @@
 
     <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
-        where send_user_id = #{userId}
+        and send_user_id = #{userId}
+        ORDER BY id DESC
+        <include refid="trendsSqlLimit"/>
     </select>
     <!--  查询  end  -->
 
@@ -64,7 +66,7 @@
 
     <!--  删除  start  -->
     <delete id="deleteTrends"  parameterType="java.lang.String">
-        delete from trends where id = #{_parameter}
+        update trends  set dele_sign = 1 where id = #{_parameter}
     </delete>
     <!--  删除  end  -->
 </mapper>

@@ -9,7 +9,6 @@ import db.mysql.provider.TrendsSendProviderMapper;
 
 public class SendTrendsController extends AdapterI{
 
-
     private SendTrendsBean resolveJson(){
         SendTrendsBean syncTrendsBean = JSONObject.parseObject(json, SendTrendsBean.class);
         System.out.println("syncTrendsBean: "+syncTrendsBean.toString());
@@ -50,9 +49,7 @@ public class SendTrendsController extends AdapterI{
     public void deleteTrend(){
         SendTrendsBean sendTrendsBean = resolveJson();
         TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
-        TrendsEntity trendsEntity = new TrendsEntity();
-        trendsEntity.setId(sendTrendsBean.getId());
-        int i = trendsSendProviderMapper.updateTrendsContent(trendsEntity);
+        int i = trendsSendProviderMapper.deleteTrendsContent(String.valueOf(sendTrendsBean.getId()));
         state = i == 1?SUCCESS_SIGN:FAIL_SIGN;
     }
 

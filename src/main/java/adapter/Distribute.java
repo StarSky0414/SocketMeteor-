@@ -120,6 +120,7 @@ public class Distribute {
      */
     public void toEncapsulation(OutputStream outputStream, AdapterResponseBean adapterResponseBean) throws IOException {
 
+        System.out.println("adapterResponseBean : "+adapterResponseBean.toString());
         String jsonString = adapterResponseBean.getJsonString();
 //        String pathString = adapterResponseBean.getPath();
 //        byte[] obligateBytes = new byte[20];

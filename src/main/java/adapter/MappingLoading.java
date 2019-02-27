@@ -5,10 +5,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.List;
 
 /**
@@ -16,17 +13,36 @@ import java.util.List;
  * 返回className
  */
 public class MappingLoading {
-    public static final String FILE_PATH = "src\\main\\java\\adapter\\mapping.xml";
+//    public static final String FILE_PATH = "E:\\skstmeteor\\src\\main\\java\\adapter\\mapping.xml";
+//    public static final String FILE_PATH = "skstmeteor\\out\\artifacts\\skst_meteor_jar";
+//    public static final String FILE_PATH = null;
 
     private InputStream loadFile() {
-        File file = new File(FILE_PATH);
-        FileInputStream fileInputStream = null;
-        try {
-            fileInputStream = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.err.println("File is not exsit!");
-        }
+        InputStream fileInputStream = this.getClass().getResourceAsStream("/adapter/mapping.xml");
+//        FILE_PATH = FILE_PATH.replace("file:/", "");
+//        System.out.println("==="+FILE_PATH);
+//        File file = new File(FILE_PATH);
+//        String canonicalPath = null;
+//        try {
+//            canonicalPath = file.getCanonicalPath();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        File[] files = file.listFiles();
+//        for (File thisFileName : files){
+//            System.out.println("thisFileName :"+thisFileName.getName());
+//        }
+//
+//        System.out.println("String canonicalPath : +++++++ "+canonicalPath);
+
+//        FileInputStream fileInputStream = null;
+//        try {
+//            fileInputStream = new FileInputStream(file);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//            System.err.println("File is not exsit!");
+//        }
         return fileInputStream;
     }
 

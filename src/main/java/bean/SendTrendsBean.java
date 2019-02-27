@@ -13,11 +13,18 @@ public class SendTrendsBean {
 
 
     public SendTrendsBean(String sendUserId, String content, String url) {
-        this.id = id;
         this.sendUserId = sendUserId;
         this.content = content;
         this.url = url;
     }
+
+    public SendTrendsBean(int id) {
+        this.id = id;
+    }
+    public SendTrendsBean() {
+    }
+
+
 
     public int getId() {
         return id;

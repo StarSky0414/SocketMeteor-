@@ -29,7 +29,7 @@ class TrendsSendProviderMapperTest {
     void testDeleteTrendsContent(){
         MysqlBase.init();
         TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
-        trendsSendProviderMapper.deleteTrendsContent("3");
+        trendsSendProviderMapper.deleteTrendsContent("4");
     }
 
 }

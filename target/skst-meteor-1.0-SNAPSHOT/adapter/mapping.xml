@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+    <message class="controller.MessageController"/>
+    <enquire class="controller.EnquireController"/>
+    <safe  class="controller.SafeController"/>
+    <testpath class="controller.SafeController"/>
+    <requestNewMessageList class="controller.SyncMessage"/>
+    <trendsSend class="controller.SendTrendsController"/>
+    <trendsSync class="controller.SyncTrendsController"/>
+</package>

@@ -1,6 +1,7 @@
 package bean;
 
 import java.io.UnsupportedEncodingException;
+import java.util.logging.Logger;
 
 public class AdapterResponseBean {
 

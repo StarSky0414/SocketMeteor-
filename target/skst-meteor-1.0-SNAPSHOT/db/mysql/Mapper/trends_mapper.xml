@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+        >
+
+<mapper namespace="trends">
+
+    <!--sql 基础-->
+
+    <sql id="trendsSqlBase">
+        SELECT id,send_user_id,content,photo_url,create_time FROM trends
+    </sql>
+    
+    <sql id="trendsSqlLimit">
+        limit 0,5
+    </sql>
+
+    <!--  查询 start  -->
+    <select id="trendsSelectBase" parameterType="TrendsEntity" resultType="TrendsEntity">
+        <include refid="trendsSqlBase"/>
+    </select>
+
+    <!--test使用，无实际意义-->
+    <resultMap id="trendsMap" type="TrendsEntity">
+        <id column="id"  property="id"/>
+        <result column="send_user_id" property="send_user_id"/>
+        <result column="content" property="content"/>
+    </resultMap>
+
+    <select id="showTrends" parameterType="java.lang.String" resultType="TrendsEntity">
+        <include refid="trendsSqlBase"/>
+            <if test="_parameter  != null  &amp;&amp;  _parameter != &quot;&quot; ">
+                where id &lt; #{appTrendsMessage}
+            </if>
+            ORDER BY id DESC
+        <include refid="trendsSqlLimit"/>
+    </select>
+
+    <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
+        <include refid="trendsSqlBase"/>
+        where send_user_id = #{userId}
+        ORDER BY id DESC
+        <include refid="trendsSqlLimit"/>
+    </select>
+    <!--  查询  end  -->
+
+    <!--  创建  start  -->
+    <insert id="insertTrends" parameterType="TrendsEntity"  useGeneratedKeys="true" keyProperty="id">
+        insert into trends ( send_user_id , content , photo_url ) values ( #{send_user_id} , #{content} , #{photo_url});
+    </insert>
+    <!--  创建  end-->
+
+    <!--  更新  start-->
+    <update id="updateTrends" parameterType="TrendsEntity">
+        update trends set id = #{id}
+        <if test="content != null">
+            , content = #{content}
+        </if>
+        <if test="photo_url != null">
+            , photo_url = #{photo_url}
+        </if>
+        where id=#{id};
+    </update>
+    <!--  更新  end  -->
+
+    <!--  删除  start  -->
+    <delete id="deleteTrends"  parameterType="java.lang.String">
+        delete from trends where id = #{_parameter}
+    </delete>
+    <!--  删除  end  -->
+</mapper>
