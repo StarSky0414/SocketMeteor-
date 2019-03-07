@@ -13,6 +13,7 @@ import java.util.UUID;
 public class Safe {
     private static int sessionLen = makeSession().length();
     private RedisBase redisBase = new RedisBase();
+    private String clientSession;
 
     /**
      *  校验 session 读取输入流
@@ -25,7 +26,8 @@ public class Safe {
         byte[] sessionByteArray = new byte[32];
         DataInputStream dataInputStream = new DataInputStream(inputStream);
         dataInputStream.read(sessionByteArray);
-        String clientSession = new String(sessionByteArray);
+        clientSession = new String(sessionByteArray);
+        System.out.println("clientSession : "+clientSession);
         String id = redisBase.queryRedisString(FunctionEnum.USERSESSION, clientSession);
         return id;
     }
@@ -59,6 +61,10 @@ public class Safe {
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
+
+    public void deleSession(){
+        redisBase.deleRedisString(FunctionEnum.USERSESSION, clientSession);
     }
 
 }

@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
-        >
+<!--<!DOCTYPE mapper-->
+        <!--PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+        <!--"http://mybatis.org/dtd/mybatis-3-mapper.dtd"-->
+        <!--&gt;-->
 
 
-<!-- EntityBean is UserFollowEntity -->
+<!--&lt;!&ndash; EntityBean is UserFollowEntity &ndash;&gt;-->
 
-<mapper namespace="userFollow">
+<!--<mapper namespace="userFollow">-->
 
-    <sql id="userFollowEntitySql">
-          id AS id,
-          start_user_id AS startUserId,
-          goal_user_id AS goalUserId,
-          create_time AS createTime,
-          state AS state,
-          dele_sign AS deleSign
-    </sql>
+    <!--<sql id="userFollowEntitySql">-->
+          <!--id AS id,-->
+          <!--start_user_id AS startUserId,-->
+          <!--goal_user_id AS goalUserId,-->
+          <!--create_time AS createTime,-->
+          <!--state AS state,-->
+          <!--dele_sign AS deleSign-->
+    <!--</sql>-->
 
-    <!--insert start-->
-    <insert id="createUserFollow" parameterType="UserFollowEntity" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO user_follow (start_user_id, goal_user_id) value (#{startUserId},#{goalUserId});
-    </insert>
+    <!--&lt;!&ndash;insert start&ndash;&gt;-->
+    <!--<insert id="createUserFollow" parameterType="UserFollowEntity" useGeneratedKeys="true" keyProperty="id">-->
+        <!--INSERT INTO user_follow (start_user_id, goal_user_id) value (#{startUserId},#{goalUserId});-->
+    <!--</insert>-->
 
-    <!--  update start  -->
-    <update id="updateUserFollowState" parameterType="UserFollowEntity">
-        UPDATE user_follow SET state = #{state} WHERE  start_user_id = #{startUserId} AND goal_user_id = #{goalUserId};
-    </update>
+    <!--&lt;!&ndash;  update start  &ndash;&gt;-->
+    <!--<update id="updateUserFollowState" parameterType="UserFollowEntity">-->
+        <!--UPDATE user_follow SET state = #{state} WHERE  start_user_id = #{startUserId} AND goal_user_id = #{goalUserId};-->
+    <!--</update>-->
 
-    <update id="deleteUserFollow" parameterType="UserFollowEntity">
-        UPDATE user_follow SET dele_sign = 1 WHERE start_user_id = #{startUserId} AND goal_user_id = #{goalUserId} AND state = 1;
-    </update>
+    <!--<update id="deleteUserFollow" parameterType="UserFollowEntity">-->
+        <!--UPDATE user_follow SET dele_sign = 1 WHERE start_user_id = #{startUserId} AND goal_user_id = #{goalUserId} AND state = 1;-->
+    <!--</update>-->
 
-    <!--select start-->
-    <select id="queryUserFollowList" parameterType="java.lang.Integer" resultType="UserFollowEntity">
-        SELECT
-        <include refid="userFollowEntitySql"/>
-        FROM user_follow WHERE ( start_user_id = #{_parameter} or goal_user_id = #{_parameter} ) AND dele_sign = 0 ORDER
-        BY create_time DESC ;
-    </select>
+    <!--&lt;!&ndash;select start&ndash;&gt;-->
+    <!--<select id="queryUserFollowList" parameterType="java.lang.Integer" resultType="UserFollowEntity">-->
+        <!--SELECT-->
+        <!--<include refid="userFollowEntitySql"/>-->
+        <!--FROM user_follow WHERE ( start_user_id = #{_parameter} or goal_user_id = #{_parameter} ) AND dele_sign = 0 ORDER-->
+        <!--BY create_time DESC ;-->
+    <!--</select>-->
 
-    <select id="queryUserFollow" parameterType="UserFollowEntity" resultType="UserFollowEntity">
-        SELECT
-        <include refid="userFollowEntitySql"/>
-        FROM user_follow WHERE ( start_user_id = #{startUserId} AND goal_user_id = #{goalUserId} ) AND dele_sign = 0 ORDER
-        BY create_time DESC ;
-    </select>
-</mapper>
+    <!--<select id="queryUserFollow" parameterType="UserFollowEntity" resultType="UserFollowEntity">-->
+        <!--SELECT-->
+        <!--<include refid="userFollowEntitySql"/>-->
+        <!--FROM user_follow WHERE ( start_user_id = #{startUserId} AND goal_user_id = #{goalUserId} ) AND dele_sign = 0 ORDER-->
+        <!--BY create_time DESC ;-->
+    <!--</select>-->
+<!--</mapper>-->

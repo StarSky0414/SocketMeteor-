@@ -4,48 +4,32 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
         >
 
-<!--  entityName UserInfoEntity  -->
 
-<mapper namespace="userInfo">
+<mapper namespace="user_info">
 
-    <!--select start-->
-    <select id="userInfoQuery" parameterType="java.lang.String" resultType="UserInfoEntity">
-        SELECT id AS id ,
-         user_phone as userPhone ,
-         user_password as passWord ,
-         user_nickname as nickname ,
-         user_head_link as photoUser ,
-         user_sex as sex ,
-         user_constellation as constellation
-         FROM user_info where id = #{id}
+    <sql id="user_info_entity">
+          id AS id,
+          user_head_link AS photoUser,
+          user_sex AS  sex,
+          user_nickname AS nickName,
+          user_constellation AS constellation
+    </sql>
+    <select id="user_info_select" parameterType="Integer" resultType="UserInfoEntity">
+        SELECT
+         <include refid="user_info_entity"/>
+          FROM user_info WHERE id = #{_parameter};
     </select>
-    <!--select end-->
 
-    <!--  插入 start  -->
-    <insert id="userInfoInit" parameterType="UserInfoEntity" keyProperty="id" useGeneratedKeys="true">
-        INSERT INTO user_info ( user_phone, user_password ) VALUES ( #{userPhone} ,#{passWord});
-    </insert>
-    <!--  插入  end  -->
+    <select id="message_user_info" parameterType="Map" resultType="UserInfoEntity">
+        select
+        <include refid="user_info_entity"/>
+        from user_info
+        where id in (select distinct (send_user_id)
+        from user_chat_message
+        where (send_user_id = #{userId} or receive_user_id = #{userId}) and user_chat_message.id > #{clientLastId})
+        or id in (select distinct (receive_user_id)
+        from user_chat_message
+        where (send_user_id = #{userId} or receive_user_id = #{userId}) and user_chat_message.id > #{clientLastId});
+    </select>
 
-    <!--  update  start  -->
-    <update id="userInfoOther" parameterType="UserInfoEntity">
-        UPDATE user_info SET id = #{id}
-        <if test="nickName !=null &amp;&amp; nickName != &quot;&quot;">
-            , user_nickname = #{nickName}
-        </if>
-        <if test="photoUser !=null &amp;&amp; photoUser != &quot;&quot;">
-            , user_head_link = #{photoUser}
-        </if>
-        <if test="constellation !=null &amp;&amp; constellation != &quot;&quot;">
-            , user_constellation = #{constellation}
-        </if>
-        <if test="sex !=null &amp;&amp; sex != &quot;&quot;">
-            , user_sex = #{sex};
-        </if>
-        where id = #{id}
-    </update>
-    <!--  update  end  -->
-
-
-    
 </mapper>

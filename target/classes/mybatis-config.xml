@@ -6,13 +6,21 @@
 
 <configuration>
 
+        <!--<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.example.entity.enums.ComputerState"/>-->
 
 
     <typeAliases>
         <typeAlias type="db.mysql.entity.TrendsEntity" alias="TrendsEntity"/>
         <typeAlias type="db.mysql.entity.UserInfoEntity" alias="UserInfoEntity"/>
         <typeAlias type="db.mysql.entity.UserFollowEntity" alias="UserFollowEntity"/>
+        <typeAlias type="db.mysql.entity.MessageEntity" alias="MessageEntity"/>
+        <typeAlias type="db.mysql.entity.RedisMessageEntity" alias="RedisMessageEntity"/>
     </typeAliases>
+
+    <typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="db.mysql.entity.MessgaeTypeEnum"/>
+    </typeHandlers>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -28,7 +36,7 @@
         <!--<package name="db.mysql"/>-->
         <mapper resource="db/mysql/Mapper/trends_mapper.xml"/>
         <mapper resource="db/mysql/Mapper/user_info_mapper.xml"/>
-        <mapper resource="db/mysql/Mapper/user_follow.xml"/>
+        <mapper resource="db/mysql/Mapper/message_mapper.xml"/>
 
     </mappers>
 

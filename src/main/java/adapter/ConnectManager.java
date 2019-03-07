@@ -30,6 +30,7 @@ public class ConnectManager implements Runnable {
             InputStream inputStream = client.getInputStream();
             OutputStream outputStream = client.getOutputStream();
             String userId = safe.checkSession(inputStream);
+            System.out.println("===========userId: "+userId);
             AdapterResponseBean adapterResponseBean = null;
             if (userId == null || userId.equals("")){
                 adapterResponseBean = new AdapterResponseBean("safe", "");
@@ -38,7 +39,10 @@ public class ConnectManager implements Runnable {
                 adapterResponseBean = distribute.toDistribute(adapterRequestBean);
             }
 //            safe.insertSession(outputStream,userId);
+            safe.insertSession(outputStream, "1");
             distribute.toEncapsulation(outputStream,adapterResponseBean);
+            safe.deleSession();
+
             closeClient();
         } catch (IOException e) {
             e.printStackTrace();

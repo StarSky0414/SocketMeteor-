@@ -30,7 +30,7 @@ public class MysqlBaseTest {
         SqlSession session = mysqlBase.getSession();
 
         TrendsEntity trendsEntity1 = new TrendsEntity();
-        trendsEntity1.setId(10);
+        trendsEntity1.setTrendId("10");
 //        trendsEntity1.setUrl("url://xxxxx.xxxx.xxxx");
 
         List<TrendsEntity> trendsEntityMap = session.selectList("trends.trendsAll",trendsEntity1);

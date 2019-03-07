@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+        >
+
+
+<mapper namespace="message">
+
+    <sql id="base_sql_map_entity">
+        id as messageid,
+        send_user_id as sendUserId,
+        receive_user_id as receiveUserId,
+        message_content as messageContent,
+        message_type as messageType ,
+        createTime as createTime
+    </sql>
+    <select id="message_select" parameterType="RedisMessageEntity" resultType="MessageEntity">
+        SELECT
+        <include refid="base_sql_map_entity"/>
+        FROM user_chat_message WHERE ( receive_user_id = #{userId} OR send_user_id = #{userId} ) AND  id >#{messageId} order by createTime
+    </select>
+
+
+</mapper>

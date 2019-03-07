@@ -6,75 +6,147 @@ package db.mysql.entity;
  */
 public class TrendsEntity {
 
-    // 消息id
-    private int id ;
-    // 发送消息id
-    private String send_user_id;
-    // 内容
-    private String content;
-    // 图片网址
-    private String photo_url;
-    // 时间
-    private String time;
+    // 发送用户id
+    private String sendUserId;
+    // 用户头像
+    private String headPhotoUrl;
+    //用户昵称
+    private String userNickName;
+    // 动态图片
+    private String trendPhotoUrl;
+    // 动态id
+    private String trendId;
+    // 动态内容
+    private String trendContent;
+    // 动态创建时间
+    private String trendCreateTime;
+    // 喜欢数量
+    private String likeNumber;
 
-    public TrendsEntity(String sendUserId, String content, String url) {
-        this.send_user_id = sendUserId;
-        this.content = content;
-        this.photo_url = url;
+    /**
+     * 客户端提交使用
+     *
+     * @param sendUserId    发送者id
+     * @param trendPhotoUrl 动态图片
+     * @param trendContent  动态内容
+     */
+    public TrendsEntity(String sendUserId, String trendPhotoUrl, String trendContent) {
+        this.sendUserId = sendUserId;
+        this.trendPhotoUrl = trendPhotoUrl;
+        this.trendContent = trendContent;
     }
 
-    public TrendsEntity(){
-
+    /**
+     * 服务端更新使用
+     *
+     * @param sendUserId    发送用户id
+     * @param trendPhotoUrl 动态图片网址
+     * @param trendId       动态id
+     * @param trendContent  动态内容
+     */
+    public TrendsEntity(String sendUserId, String trendPhotoUrl, String trendId, String trendContent) {
+        this.sendUserId = sendUserId;
+        this.trendPhotoUrl = trendPhotoUrl;
+        this.trendId = trendId;
+        this.trendContent = trendContent;
     }
 
-    public int getId() {
-        return id;
+    /**
+     * 服务端返回使用
+     *
+     * @param sendUserId      发送者id
+     * @param headPhotoUrl    发送者头像图片
+     * @param userNickName    发送者昵称
+     * @param trendPhotoUrl   动态图片网址
+     * @param trendId         动态图片id
+     * @param trendContent    动态图片内容
+     * @param trendCreateTime 动态图片创建时间
+     * @param likeNumber      喜欢数量
+     */
+    public TrendsEntity(String sendUserId, String headPhotoUrl, String userNickName, String trendPhotoUrl, String trendId, String trendContent, String trendCreateTime, String likeNumber) {
+        this.sendUserId = sendUserId;
+        this.headPhotoUrl = headPhotoUrl;
+        this.userNickName = userNickName;
+        this.trendPhotoUrl = trendPhotoUrl;
+        this.trendId = trendId;
+        this.trendContent = trendContent;
+        this.trendCreateTime = trendCreateTime;
+        this.likeNumber = likeNumber;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    /**
+     * 空构造器
+     */
+    public TrendsEntity() {
     }
+
+    //==============================
+    // get,set 方法
+    //==============================
+
 
     public String getSendUserId() {
-        return send_user_id;
+        return sendUserId;
     }
 
     public void setSendUserId(String sendUserId) {
-        this.send_user_id = sendUserId;
+        this.sendUserId = sendUserId;
     }
 
-    public String getContent() {
-        return content;
+    public String getHeadPhotoUrl() {
+        return headPhotoUrl;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setHeadPhotoUrl(String headPhotoUrl) {
+        this.headPhotoUrl = headPhotoUrl;
     }
 
-    public String getTime() {
-        return time;
+    public String getUserNickName() {
+        return userNickName;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setUserNickName(String userNickName) {
+        this.userNickName = userNickName;
     }
 
-    public String getUrl() {
-        return photo_url;
+    public String getTrendPhotoUrl() {
+        return trendPhotoUrl;
     }
 
-    public void setUrl(String url) {
-        this.photo_url = url;
+    public void setTrendPhotoUrl(String trendPhotoUrl) {
+        this.trendPhotoUrl = trendPhotoUrl;
     }
 
-    @Override
-    public String toString() {
-        return "TrendsEntity{" +
-                "id=" + id +
-                ", sendUserId='" + send_user_id + '\'' +
-                ", content='" + content + '\'' +
-                ", url='" + photo_url + '\'' +
-                ", time='" + time + '\'' +
-                '}';
+    public String getTrendId() {
+        return trendId;
+    }
+
+    public void setTrendId(String trendId) {
+        this.trendId = trendId;
+    }
+
+    public String getTrendContent() {
+        return trendContent;
+    }
+
+    public void setTrendContent(String trendContent) {
+        this.trendContent = trendContent;
+    }
+
+    public String getTrendCreateTime() {
+        return trendCreateTime;
+    }
+
+    public void setTrendCreateTime(String trendCreateTime) {
+        this.trendCreateTime = trendCreateTime;
+    }
+
+    public String getLikeNumber() {
+        return likeNumber;
+    }
+
+    public void setLikeNumber(String likeNumber) {
+        this.likeNumber = likeNumber;
     }
 }
+

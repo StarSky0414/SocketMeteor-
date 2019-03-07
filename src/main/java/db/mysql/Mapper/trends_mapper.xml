@@ -9,9 +9,18 @@
     <!--sql 基础-->
 
     <sql id="trendsSqlBase">
-        SELECT id,send_user_id,content,photo_url,create_time FROM trends where dele_sign = 0
+        SELECT
+  send_user_id AS  sendUserId,
+  user_head_link AS headPhotoUrl,
+  user_nickname AS userNickName,
+  trends.id AS trendId,
+  content AS trendContent,
+  create_time AS trendCreateTime,
+  photo_url AS trendPhotoUrl,
+  0 AS likeNumber
+FROM trends , user_info WHERE trends.send_user_id = user_info.id AND dele_sign = 0
     </sql>
-    
+
     <sql id="trendsSqlLimit">
         limit 0,5
     </sql>
@@ -22,50 +31,50 @@
     </select>
 
     <!--test使用，无实际意义-->
-    <resultMap id="trendsMap" type="TrendsEntity">
-        <id column="id"  property="id"/>
-        <result column="send_user_id" property="send_user_id"/>
-        <result column="content" property="content"/>
-    </resultMap>
+    <!--<resultMap id="trendsMap" type="TrendsEntity">-->
+        <!--<id column="id" property="id"/>-->
+        <!--<result column="send_user_id" property="send_user_id"/>-->
+        <!--<result column="content" property="content"/>-->
+    <!--</resultMap>-->
 
     <select id="showTrends" parameterType="java.lang.String" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
-            <if test="_parameter  != null  &amp;&amp;  _parameter != &quot;&quot; ">
-                and id &lt; #{appTrendsMessage}
-            </if>
-            ORDER BY id DESC
+        <if test="_parameter  != null  &amp;&amp;  _parameter != &quot;&quot; ">
+            and trends.id &lt; #{appTrendsMessage}
+        </if>
+        ORDER BY trends.id DESC
         <include refid="trendsSqlLimit"/>
     </select>
 
     <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
         and send_user_id = #{userId}
-        ORDER BY id DESC
+        ORDER BY trends.id DESC
         <include refid="trendsSqlLimit"/>
     </select>
     <!--  查询  end  -->
 
     <!--  创建  start  -->
-    <insert id="insertTrends" parameterType="TrendsEntity"  useGeneratedKeys="true" keyProperty="id">
-        insert into trends ( send_user_id , content , photo_url ) values ( #{send_user_id} , #{content} , #{photo_url});
+    <insert id="insertTrends" parameterType="TrendsEntity" useGeneratedKeys="true" keyProperty="id">
+        insert into trends ( send_user_id , content , photo_url ) values ( #{sendUserId} , #{trendContent} , #{trendPhotoUrl});
     </insert>
     <!--  创建  end-->
 
     <!--  更新  start-->
     <update id="updateTrends" parameterType="TrendsEntity">
-        update trends set id = #{id}
-        <if test="content != null">
-            , content = #{content}
+        update trends set id = #{trendId}
+        <if test="trendContent != null">
+            , content = #{trendContent}
         </if>
-        <if test="photo_url != null">
-            , photo_url = #{photo_url}
+        <if test="trendPhotoUrl != null">
+            , photo_url = #{trendPhotoUrl}
         </if>
-        where id=#{id};
+        where trends.id=#{trendId};
     </update>
     <!--  更新  end  -->
 
     <!--  删除  start  -->
-    <delete id="deleteTrends"  parameterType="java.lang.String">
+    <delete id="deleteTrends" parameterType="java.lang.String">
         update trends  set dele_sign = 1 where id = #{_parameter}
     </delete>
     <!--  删除  end  -->

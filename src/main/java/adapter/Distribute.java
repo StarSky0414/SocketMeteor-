@@ -129,8 +129,7 @@ public class Distribute {
 
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
-        Safe safe = new Safe();
-        safe.insertSession(outputStream, "1");
+
 //        Integer integer = new Integer(13);
 //        byte[] packLengthByte = Conversion.intToByteArray(packLength);
         byte[] packLengthByte = String.format("%08d", packLength).getBytes();

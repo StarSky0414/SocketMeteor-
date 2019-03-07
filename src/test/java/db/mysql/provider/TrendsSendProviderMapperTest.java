@@ -19,8 +19,8 @@ class TrendsSendProviderMapperTest {
     @Test
     void testupdateTrendsContent(){
         MysqlBase.init();
-        TrendsEntity trendsEntity = new TrendsEntity("4", "测试内容4", "url://xxxxx.xxxx.xxxx");
-        trendsEntity.setId(3);
+        TrendsEntity trendsEntity = new TrendsEntity("4", "测试内容42222", "url://xxxxx.xxxx.xxxx");
+        trendsEntity.setTrendId("3");
         TrendsSendProviderMapper trendsSendProviderMapper = new TrendsSendProviderMapper();
         trendsSendProviderMapper.updateTrendsContent(trendsEntity);
     }
