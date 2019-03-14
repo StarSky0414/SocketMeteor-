@@ -6,6 +6,6 @@ package bean.json.enumerate;
  *  用于 message content
  */
 public enum  FollowState {
-    SEND,REQUEST,AGREEED,REFUSED,AGREE,REFUSE
+    SEND,REQUEST,AGREE,AGREEED,REFUSE,REFUSED
 }
 

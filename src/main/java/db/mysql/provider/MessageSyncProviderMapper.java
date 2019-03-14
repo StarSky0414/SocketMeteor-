@@ -17,7 +17,6 @@ public class MessageSyncProviderMapper extends MysqlProviderBase{
 //        return userChatMessageEntity;
 //    }
 
-
     public List<MessageEntity> queryMessage(RedisMessageEntity redisMessageEntity){
         List<MessageEntity> messageEntityList = mysqlBaseSession.selectList("message.message_select", redisMessageEntity);
         return messageEntityList;

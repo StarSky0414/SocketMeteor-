@@ -10,9 +10,9 @@ import java.util.concurrent.*;
  */
 public class ConnectPool {
     //核心线程数量
-    private static final int POOLSIZE = 5;
+    private static final int POOLSIZE = 50;
     //最大线程数
-    private static final int MAXIMUMPOOLSIZE = 7;
+    private static final int MAXIMUMPOOLSIZE = 70;
     //存活时间 单位是s
     private static final int KEEPALIVETIME = 1;
     //队列等待数量
