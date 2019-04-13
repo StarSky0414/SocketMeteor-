@@ -18,36 +18,40 @@ public class ConnectManager implements Runnable {
     private final Safe safe;
 
     public ConnectManager(int i, Socket client) {
-        this.taskNum=i;
-        this.client=client;
-        distribute=new Distribute();
+        this.taskNum = i;
+        this.client = client;
+        distribute = new Distribute();
         safe = new Safe();
     }
 
     public void run() {
-        System.out.println("正在执行task "+taskNum);
+        System.out.println("正在执行task " + taskNum);
         try {
             InputStream inputStream = client.getInputStream();
             OutputStream outputStream = client.getOutputStream();
             String userId = safe.checkSession(inputStream);
-            System.out.println("===========userId: "+userId);
+            System.out.println("===========userId: " + userId);
             AdapterResponseBean adapterResponseBean = null;
-            if (userId == null || userId.equals("")){
-                adapterResponseBean = new AdapterResponseBean("safe", "");
-            }else {
+            if (userId == null || userId.equals("")) {
+                adapterResponseBean = new AdapterResponseBean("safe", "[]");
+            } else {
                 AdapterRequestBean adapterRequestBean = distribute.resolvePackage(inputStream);
-                adapterResponseBean = distribute.toDistribute(adapterRequestBean);
+                adapterResponseBean = distribute.toDistribute(adapterRequestBean, userId);
             }
-//            safe.insertSession(outputStream,userId);
-            safe.insertSession(outputStream, "1");
-            distribute.toEncapsulation(outputStream,adapterResponseBean);
+
+            safe.insertSession(outputStream, userId);
+            //==============================
+            // 测试使用！！！！！！！！！
+            //==============================
+//            safe.insertSession(outputStream,"1");
+            distribute.toEncapsulation(outputStream, adapterResponseBean);
             safe.deleSession();
 
             closeClient();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("task "+taskNum+"执行完毕");
+        System.out.println("task " + taskNum + "执行完毕");
     }
 
 //    public void setClient(Socket client) {

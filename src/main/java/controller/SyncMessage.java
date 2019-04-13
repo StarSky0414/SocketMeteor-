@@ -1,5 +1,6 @@
 package controller;
 
+import adapter.MessageInit;
 import adapter.MethodName;
 import bean.AdapterResponseBean;
 import bean.MessageSendResolveJsonBean;
@@ -13,6 +14,7 @@ import db.mysql.entity.UserInfoEntity;
 import db.mysql.provider.MessageSyncProviderMapper;
 import db.mysql.provider.UserInfoSyncProvider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SyncMessage extends AdapterI {
@@ -43,14 +45,27 @@ public class SyncMessage extends AdapterI {
         SyncMessageRequestBean syncMessageRequestBean = resolveJson();
         String locatMessageId = syncMessageRequestBean.getLocatMessageId();
         String userId = syncMessageRequestBean.getUserId();
+        List<MessageEntity> messageEntities = null;
+        List<UserInfoEntity> messageUserInfo = null;
+        int messageNum = MessageInit.getMessageNum();
+        if (Integer.valueOf(locatMessageId)== messageNum){
+            messageEntities = new ArrayList<>();
+            messageUserInfo = new ArrayList<>();
+            new MessageResponseBean(messageEntities, messageUserInfo);
+            return;
+        }
 
         MessageSyncProviderMapper messageSyncProviderMapper = new MessageSyncProviderMapper();
         RedisMessageEntity redisMessageEntity = new RedisMessageEntity(userId, locatMessageId);
-        List<MessageEntity> messageEntities = messageSyncProviderMapper.queryMessage(redisMessageEntity);
+        messageEntities = messageSyncProviderMapper.queryMessage(redisMessageEntity);
 
         UserInfoSyncProvider userInfoSyncProvider = new UserInfoSyncProvider();
-        List<UserInfoEntity> messageUserInfo = userInfoSyncProvider.getMessageUserInfo(Integer.valueOf(userId), Integer.valueOf(locatMessageId));
+        messageUserInfo = userInfoSyncProvider.getMessageUserInfo(Integer.valueOf(userId), Integer.valueOf(locatMessageId));
 
         messageResponseBean = new MessageResponseBean(messageEntities, messageUserInfo);
+    }
+
+    public void setJson(String json){
+        this.json = json;
     }
 }

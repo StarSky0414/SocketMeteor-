@@ -21,5 +21,14 @@
         FROM user_chat_message WHERE ( receive_user_id = #{userId} OR send_user_id = #{userId} ) AND  id >#{messageId} order by createTime
     </select>
 
+    <insert id="message_insert" parameterType="SendMessageBean">
+        insert into user_chat_message (send_user_id, receive_user_id, message_content, message_type, voiceTime) values (#{sendUserId},#{receiveUserId},#{MessageContext},#{messageTypeNum},#{voiceTime});
+    </insert>
+
+    <select id="message_select_all" resultType="java.lang.Integer">
+        SELECT
+        MAX(id)
+        FROM user_chat_message
+    </select>
 
 </mapper>

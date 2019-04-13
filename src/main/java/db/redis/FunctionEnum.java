@@ -2,7 +2,6 @@ package db.redis;
 
 public enum FunctionEnum {
 
-
     USERINFO("user_info:id:"),
     USERSESSION("user_session:session:");
 

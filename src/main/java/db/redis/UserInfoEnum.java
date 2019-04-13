@@ -6,7 +6,9 @@ package db.redis;
 
 public enum UserInfoEnum implements RedisListStructure {
     // 用户地址
-    SESSION_ADDRESS,
+    USER_ADDRESS,
+    // 用户地址
+    USER_ADDRESS_PORT,
     // 用户old消息id
     OLD_MESSAGE_ID,
     // 已发送用户消息id

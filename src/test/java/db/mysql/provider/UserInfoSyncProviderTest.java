@@ -1,5 +1,6 @@
 package db.mysql.provider;
 
+import db.mysql.entity.OtherUserInfoQuery;
 import db.mysql.entity.UserInfoEntity;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +28,13 @@ class UserInfoSyncProviderTest extends DBProviderTestBase {
     }
 
     @Override
-    void init() {
+    protected void init() {
         userInfoSyncProvider = new UserInfoSyncProvider();
+    }
+
+    @Test
+    public  void testQueryOtherUserInfo(){
+        OtherUserInfoQuery otherUserInfoQuery = userInfoSyncProvider.queryUserInfo("1");
+        System.out.println("otherUserInfoQuery  ： "+otherUserInfoQuery);
     }
 }

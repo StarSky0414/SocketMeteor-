@@ -1,13 +1,17 @@
 package db.mysql.provider;
 
-import db.mysql.Mapper.MessageSendMapper;
+import bean.json.request.SendMessageBean;
 
 public class MessageSendProviderMapper extends MysqlProviderBase {
 
-    public void insertTextMessage(String sendUserId,String receiveUserid,String messageContent){
-        MessageSendMapper messageSendMapper = mysqlBaseSession.getMapper(MessageSendMapper.class);
-        messageSendMapper.insertMessage(sendUserId,receiveUserid,messageContent,"Text",null);
+    public int insertMessage(SendMessageBean sendMessageBean){
+//        MessageSendMapper messageSendMapper = mysqlBaseSession.getMapper(MessageSendMapper.class);
+//        messageSendMapper.insertMessage(sendUserId,receiveUserid,messageContent,"Text",null);
+//        mysqlBaseSession.commit();
+//        mysqlBaseSession.close();
+        int insert = mysqlBaseSession.insert("message.message_insert",sendMessageBean);
         mysqlBaseSession.commit();
-        mysqlBaseSession.close();
+        return insert;
+
     }
 }

@@ -2,14 +2,10 @@ package adapter;
 
 import bean.AdapterRequestBean;
 import bean.AdapterResponseBean;
-import bean.SendTrendsBean;
 import controller.AdapterI;
-import controller.SendTrendsController;
-import safeproving.Safe;
 import utiles.Conversion;
 
 import java.io.*;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -21,9 +17,10 @@ public class Distribute {
     /**
      * 分发，根据分发路径，创建实体对象
      * @param adapterRequestBean 分发路径，并非class路径
+     * @param userId
      * @return 回应的json数据
      */
-    public AdapterResponseBean toDistribute(AdapterRequestBean adapterRequestBean) {
+    public AdapterResponseBean toDistribute(AdapterRequestBean adapterRequestBean, String userId) {
         String[] path = adapterRequestBean.getPathString().split(":");
         String aClassName = path[0];
         String modeName = path[1];
@@ -34,6 +31,7 @@ public class Distribute {
             Constructor<?> cons = cls.getConstructor();
             AdapterI adapterI = (AdapterI) cons.newInstance();
             adapterI.setAdapterResponseBean(jsonString);
+            adapterI.userId=userId;
             callMethodAnnotate(adapterI,modeName);
             adapterResponseBean = adapterI.getAdapterResponse();
         } catch (Exception e) {

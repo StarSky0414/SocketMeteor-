@@ -8,7 +8,8 @@ import conf.ProjectResource;
  */
 abstract public class AdapterI {
 
-    String json;
+    public String json;
+    public String userId;
     public static final String SUCCESS_SIGN="{\"state\":1}";
     public static final String FAIL_SIGN="{\"state\":0}";
 

@@ -32,4 +32,16 @@
         where (send_user_id = #{userId} or receive_user_id = #{userId}) and user_chat_message.id > #{clientLastId});
     </select>
 
+    <select id="queryUserOtherInfo" parameterType="java.lang.String" resultType="OtherUserInfoQuery">
+        SELECT
+        <include refid="user_info_entity"/>
+        FROM user_info WHERE id = #{_parameter};
+    </select>
+
+    <select id="user_info_select_all" parameterType="java.lang.String" resultType="UserInfoEntity">
+        SELECT
+        <include refid="user_info_entity"/>
+        FROM user_info WHERE id != #{_parameter};
+    </select>
+
 </mapper>

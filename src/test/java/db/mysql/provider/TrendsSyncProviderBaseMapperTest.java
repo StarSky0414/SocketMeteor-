@@ -54,7 +54,7 @@ class TrendsSyncProviderBaseMapperTest extends DBProviderTestBase {
     }
 
     @Override
-    void init() {
+    protected void init() {
         trendsSyncProviderBaseMapper = new TrendsSyncProviderBaseMapper();
     }
 }

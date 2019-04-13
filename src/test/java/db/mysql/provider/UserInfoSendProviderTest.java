@@ -12,7 +12,7 @@ class UserInfoSendProviderTest extends DBProviderTestBase {
     private static String userId;
 
     @Override
-    void init() {
+    protected void init() {
         userInfoSendProvider = new UserInfoSendProvider();
         userInfoEntity = new UserInfoEntity();
     }

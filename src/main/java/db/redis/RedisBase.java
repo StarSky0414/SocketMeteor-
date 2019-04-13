@@ -1,20 +1,21 @@
 package db.redis;
 
+import db.redis.annotate.MyJedisAnalyze;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisDataException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class RedisBase {
 
-    private final Jedis jedis;
 
     /**
      * Jedis 获取
      */
     public RedisBase() {
-        jedis = RedisConnect.getJedis();
+//        if (jedis ==null) {
+//        jedis =
+//        }
     }
 
     /**
@@ -25,10 +26,12 @@ public class RedisBase {
      * @param values   参数按list 顺序创建
      */
     public void createRedisList(FunctionEnum keyClass, String object, String[] values) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":list";
         for (String value : values) {
             jedis.rpush(key, value);
         }
+        jedis.close();
     }
 
     /**
@@ -40,6 +43,7 @@ public class RedisBase {
      * @param redisListStructure 实现该接口的枚举，用于list结构
      */
     public void updateRedisList(FunctionEnum keyClass, String object, String[] values, RedisListStructure redisListStructure) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":list";
         RedisListStructure[] redisListStructureEnum = redisListStructure.getEnum();
         for (int i = 0; i < values.length; i++) {
@@ -50,6 +54,7 @@ public class RedisBase {
                 jedis.rpush(key, values[i]);
             }
         }
+        jedis.close();
     }
 
     /**
@@ -61,10 +66,38 @@ public class RedisBase {
      * @return 查询结果
      */
     public String queryRedisList(FunctionEnum keyClass, String object, RedisListStructure redisListStructure) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":list";
         int index = redisListStructure.getindex();
         String indexResult = jedis.lindex(key, index);
+        jedis.close();
         return indexResult;
+    }
+
+    /**
+     * redis list 数据自增长
+     *
+     * @param keyClass           前缀
+     * @param object             种类详细值  例如前缀是id 该参数即为id详细值
+     * @param redisListStructure 实现该接口的枚举，用于list结构
+     * @return 查询结果
+     */
+    public Integer inrcRedisList(FunctionEnum keyClass, String object, RedisListStructure redisListStructure) {
+        String s = queryRedisList(keyClass, object, redisListStructure);
+        Integer integer;
+        if (s == null || s.equals("")) {
+            integer = 0;
+        }else {
+            integer = Integer.valueOf(s);
+        }
+
+        integer++;
+//        updateRedisList(keyClass,object,new String[]{String.valueOf(integer)},redisListStructure);
+        HashMap<UserInfoEnum, String> userInfoEnumStringHashMap = new HashMap<>();
+        userInfoEnumStringHashMap.put(UserInfoEnum.MESSAGEED_ID,String.valueOf(integer));
+        MyJedisAnalyze myJedisAnalyze = new MyJedisAnalyze();
+        myJedisAnalyze.jedisList(FunctionEnum.USERINFO,object,RedisDataBasicOperation.UPDATE,userInfoEnumStringHashMap);
+        return integer;
     }
 
     /**
@@ -75,6 +108,7 @@ public class RedisBase {
      * @return 查询结果 list
      */
     public String[] queryAllRedisList(FunctionEnum keyClass, String object) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":list";
         long llen = jedis.llen(key);
         String[] allresultString = new String[(int) llen];
@@ -82,6 +116,7 @@ public class RedisBase {
             String lindex = jedis.lindex(key, i);
             allresultString[i] = lindex;
         }
+        jedis.close();
         return allresultString;
     }
 
@@ -93,8 +128,10 @@ public class RedisBase {
      * @param values   要存储的值
      */
     public void createRedisString(FunctionEnum keyClass, String object, String values) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":String";
         jedis.set(key, values);
+        jedis.close();
     }
 
     /**
@@ -105,8 +142,10 @@ public class RedisBase {
      * @return value 值
      */
     public String queryRedisString(FunctionEnum keyClass, String object) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":String";
         String resultString = jedis.get(key);
+        jedis.close();
         return resultString;
     }
 
@@ -128,7 +167,9 @@ public class RedisBase {
      * @param object   种类详细值
      */
     public void deleRedisString(FunctionEnum keyClass, String object) {
+        Jedis jedis = RedisConnect.getJedis();
         String key = keyClass.getKeyName() + object + ":String";
         jedis.del(key);
+        jedis.close();
     }
 }

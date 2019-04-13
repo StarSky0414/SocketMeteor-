@@ -48,9 +48,8 @@ FROM trends , user_info WHERE trends.send_user_id = user_info.id AND dele_sign =
 
     <select id="showTheUserTrends" parameterType="java.lang.String" resultType="TrendsEntity">
         <include refid="trendsSqlBase"/>
-        and send_user_id = #{userId}
+        and send_user_id = #{_parameter}
         ORDER BY trends.id DESC
-        <include refid="trendsSqlLimit"/>
     </select>
     <!--  查询  end  -->
 
@@ -78,4 +77,11 @@ FROM trends , user_info WHERE trends.send_user_id = user_info.id AND dele_sign =
         update trends  set dele_sign = 1 where id = #{_parameter}
     </delete>
     <!--  删除  end  -->
+
+    <!--查询用户信息动态图片-->
+    <select id="queryUserTrendsPhoto" parameterType="java.lang.String" resultType="java.lang.String">
+        select photo_url from trends where send_user_id = #{_parameter} and photo_url is not NULL order by create_time desc limit 10
+    </select>
+
+
 </mapper>

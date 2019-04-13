@@ -1,7 +1,7 @@
 package db.mysql.provider;
 
+import db.mysql.entity.OtherUserInfoQuery;
 import db.mysql.entity.UserInfoEntity;
-
 import java.util.HashMap;
 import java.util.List;
 
@@ -28,6 +28,22 @@ public class UserInfoSyncProvider extends MysqlProviderBase {
         messagePram.put("clientLastId", clientId);
         List<UserInfoEntity> userInfoEntities = mysqlBaseSession.selectList("user_info.message_user_info", messagePram);
         return userInfoEntities;
+    }
+
+    public OtherUserInfoQuery queryUserInfo(String queryUserId){
+        List<String> userTrendsPhoto = queryUserTrendsPhoto(queryUserId);
+        List<OtherUserInfoQuery> queryUserTrendsPhoto = mysqlBaseSession.selectList("user_info.queryUserOtherInfo", queryUserId);
+        OtherUserInfoQuery otherUserInfoQuery = null;
+        if (queryUserTrendsPhoto !=null || queryUserTrendsPhoto.size() ==1){
+            otherUserInfoQuery = queryUserTrendsPhoto.get(0);
+            otherUserInfoQuery.setUserTrendsPhoto(userTrendsPhoto);
+        }
+        return otherUserInfoQuery;
+    }
+
+    private List<String> queryUserTrendsPhoto(String queryUserId){
+        List<String> queryUserTrendsPhoto = mysqlBaseSession.selectList("trends.queryUserTrendsPhoto", queryUserId);
+        return queryUserTrendsPhoto;
     }
 
 }

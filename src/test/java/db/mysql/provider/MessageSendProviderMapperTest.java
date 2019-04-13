@@ -10,6 +10,6 @@ class MessageSendProviderMapperTest {
     void testInsertTextMessage() {
         MysqlBase.init();
         MessageSendProviderMapper messageSendProviderMapper = new MessageSendProviderMapper();
-        messageSendProviderMapper.insertTextMessage("123","321","DBINsert");
+//        messageSendProviderMapper.insertTextMessage("123","321","DBINsert");
     }
 }

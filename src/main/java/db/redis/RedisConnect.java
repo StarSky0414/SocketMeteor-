@@ -45,21 +45,21 @@ public class RedisConnect {
         //最大空闲连接数, 默认8个
         config.setMaxIdle(8);
         //最大连接数, 默认8个
-        config.setMaxTotal(50);
+        config.setMaxTotal(500);
         //获取连接时的最大等待毫秒数(如果设置为阻塞时BlockWhenExhausted),如果超时就抛异常, 小于零:阻塞不确定的时间,  默认-1
-        config.setMaxWaitMillis(-1);
+        config.setMaxWaitMillis(1000);
         //逐出连接的最小空闲时间 默认1800000毫秒(30分钟)
-        config.setMinEvictableIdleTimeMillis(1800000);
+        config.setMinEvictableIdleTimeMillis(1000);
         //最小空闲连接数, 默认0
         config.setMinIdle(3);
         //对象空闲多久后逐出, 当空闲时间>该值 且 空闲连接>最大空闲数 时直接逐出,不再根据MinEvictableIdleTimeMillis判断  (默认逐出策略)
-        config.setSoftMinEvictableIdleTimeMillis(1800000);
+        config.setSoftMinEvictableIdleTimeMillis(2000);
         //在获取连接的时候检查有效性, 默认false
         config.setTestOnBorrow(false);
         //在空闲时检查有效性, 默认false
         config.setTestWhileIdle(false);
         //逐出扫描的时间间隔(毫秒) 如果为负数,则不运行逐出线程, 默认-1
-        config.setTimeBetweenEvictionRunsMillis(-1);
+        config.setTimeBetweenEvictionRunsMillis(300);
         return config;
     }
 

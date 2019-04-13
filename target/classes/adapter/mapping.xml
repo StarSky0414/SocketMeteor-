@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
     <syncMessage class="controller.SyncMessage"/>
+    <sendMessage class="controller.SendMessage"/>
     <enquire class="controller.EnquireController"/>
     <safe  class="controller.SafeController"/>
     <testpath class="controller.SafeController"/>
     <requestNewMessageList class="controller.SyncMessage"/>
     <trendsSend class="controller.SendTrendsController"/>
     <trendsSync class="controller.SyncTrendsController"/>
+    <userInfo class="controller.SyncUserInfo"/>
+    <syncFindInfo class="controller.SyncFindInfo"/>
 </package>

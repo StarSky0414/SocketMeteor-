@@ -36,7 +36,7 @@ class UserFollowSendProviderTest extends DBProviderTestBase {
     }
 
     @Override
-    void init() {
+    protected void init() {
         userFollowSendProvider = new UserFollowSendProvider();
         userFollowEntity = new UserFollowEntity();
     }

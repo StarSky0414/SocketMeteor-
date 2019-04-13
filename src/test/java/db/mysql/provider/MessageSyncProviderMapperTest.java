@@ -35,7 +35,7 @@ class MessageSyncProviderMapperTest  extends DBProviderTestBase{
     }
 
     @Override
-    void init() {
+    protected void init() {
         messageSyncProviderMapper = new MessageSyncProviderMapper();
     }
 }

@@ -18,5 +18,5 @@ public abstract class DBProviderTestBase {
         init();
     }
 
-    abstract void init();
+    protected abstract void init();
 }

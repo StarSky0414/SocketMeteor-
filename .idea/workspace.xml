@@ -18,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/skstmeteor$StartServer.ic" NAME="StartServer Coverage Results" MODIFIED="1543163852904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/skstmeteor$StartServer.ic" NAME="StartServer Coverage Results" MODIFIED="1555059365003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -52,6 +52,20 @@
         <item name="meteor@120.25.96.141" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="meteor: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="trends: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="meteor@120.25.96.141" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="meteor: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="user_chat_message: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="meteor@120.25.96.141" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="meteor: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="user_info: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -62,58 +76,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessageResponseBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/response/MessageResponseBean.java">
+      <file leaf-file-name="ConnectManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="25">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FollowState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/enumerate/FollowState.java">
+      <file leaf-file-name="SyncUserInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncUserInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="-206">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_chat_message" pinned="false" current-in-tab="false">
-        <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_chat_message">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="UserInfoEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/UserInfoEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectPool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectPool.java">
+      <file leaf-file-name="OtherUserInfoQuery.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/OtherUserInfoQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="-1061">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MappingLoading.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/MappingLoading.java">
+      <file leaf-file-name="SyncTrendsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="94">
+              <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrendsSyncProviderBaseMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="48" column="99" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trends_mapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/trends_mapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -127,26 +148,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Distribute.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/Distribute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapping.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/mapping.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_follow" pinned="false" current-in-tab="false">
-        <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_follow">
+      <file leaf-file-name="user_chat_message" pinned="false" current-in-tab="true">
+        <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_chat_message">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -154,11 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trends" pinned="false" current-in-tab="false">
-        <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/trends">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7989833b-71a5-4171-9d65-e783ea4eef01/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="925">
+              <caret line="37" column="148" selection-start-line="37" selection-start-column="148" selection-end-line="37" selection-end-column="148" />
             </state>
           </provider>
         </entry>
@@ -178,36 +181,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TrendsEntity</find>
-      <find>showTrends</find>
-      <find>showTheUserTrends</find>
-      <find>adapterResponseBean</find>
-      <find>properties</find>
-      <find>modelVersion</find>
-      <find>mapping.xml</find>
-      <find>mybatis-config.xml</find>
-      <find>trendsSync</find>
-      <find>id : 37</find>
-      <find>deleteTrend</find>
-      <find>sendTrendsBean</find>
-      <find>db/mysql/Mapper/message_mapper.xml.xml</find>
-      <find>jedisString</find>
+      <find>getUserId</find>
+      <find>StringByKey</find>
+      <find>Send</find>
+      <find>checkJedisNull</find>
+      <find>text</find>
+      <find>true</find>
+      <find>=================</find>
+      <find>MessageResponseBean</find>
+      <find>syncMessage</find>
+      <find>SyncMessageRequestBean</find>
+      <find>_par</find>
       <find>_parameter</find>
-      <find>UserFollowEntity</find>
-      <find>deleteTrends</find>
-      <find>environment</find>
-      <find>sql</find>
-      <find>trendsId</find>
-      <find>type</find>
-      <find>session:</find>
-      <find>clientSession</find>
-      <find>content</find>
-      <find>user_info</find>
-      <find>user_info_select</find>
+      <find>session.selectList</find>
+      <find>AdapterI</find>
+      <find>redisBase.queryRedisString(FunctionEnum.USERSESSION</find>
+      <find>user_info_select_all</find>
       <find>java.lang.Integer</find>
-      <find>getMessage</find>
-      <find>@MethodName(methodName = &quot;getMessage&quot;)</find>
-      <find>Class.fo</find>
+      <find>user_info_entity</find>
+      <find>constellation</find>
+      <find>UserInfoEntity</find>
+      <find>{*}</find>
+      <find>session:</find>
+      <find>&quot;{}&quot;</find>
+      <find>insertSessio</find>
+      <find>{}</find>
+      <find>#{_par</find>
+      <find>user_info.queryUserOtherInfo</find>
+      <find>getload</find>
+      <find>showTheUserTrends</find>
+      <find>trendsSqlLimit</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -219,57 +222,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/bean/SendTrendsBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/adapter/MappingLoading.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/AdapterI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/message_mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/MessageSendProviderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/entity/OtherUserInfoQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/user_info_mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/UserInfoSyncProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/mysql/provider/UserInfoSyncProviderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/json/request/UserInfoRequestBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/SyncUserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/adapter/mapping.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/SendTrendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/SendTrendsBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/entity/TrendsEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/SyncTrendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/AdapterResponseBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/SendTrendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/adapter/Distribute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/connect/MessageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/user/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/redis/OnLineListTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/OnLineList.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/UserInfoSyncProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/FunctionEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/UserInfoEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/annotate/MyJedisAnalyze.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/udp/syncMessageUdp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/udp/SyncMessageUdp.java" />
         <option value="$PROJECT_DIR$/src/main/java/StartServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/adapter/MappingLoading.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/SyncTrendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSendProviderMapper.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/RedisMessageEntity.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/Distribute.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_follow.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/AdapterI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/RedisConnect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/adapter/udp/syncMessageACK.java" />
+        <option value="$PROJECT_DIR$/src/main/java/adapter/udp/syncMessageResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/adapter/udp/SyncMessageResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/adapter/udp/UdpListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/SendMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/redis/RedisBase.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/RedisBase.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SyncMessageRequestBean.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/udp/UdpListener.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/StartServer.java" />
         <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/message_mapper.xml" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/response/TrendsAndHmoeResponseBean.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/response/TrendsResponseBean.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/MysqlBaseTest.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/TrendsSendProviderMapperTest.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SendTrendsBean.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/safeproving/Safe.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/TrendsEntity.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendTrendsController.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessageEntity.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/UserInfoSyncProviderTest.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/UserInfoSyncProvider.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_info_mapper.xml" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/MessageSyncProviderMapperTest.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/response/MessageResponseBean.java" />
         <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncMessage.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/MessageInit.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendMessage.java" />
         <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/mapping.xml" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/enumerate/FollowState.java" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/MessageSyncProviderMapper.java" />
-        <option value="7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_info.sql" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessgaeTypeEnum.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/AdapterI.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/bean/AdapterRequestBean.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/Distribute.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/test/java/controller/SendTrendsControllerTest.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_info_mapper.xml" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SafeController.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncFindInfo.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7989833b-71a5-4171-9d65-e783ea4eef01/console.sql" />
-        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectPool.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/safeproving/Safe.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java" />
+        <option value="$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/trends_mapper.xml" />
       </list>
     </option>
   </component>
@@ -316,10 +319,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-84" />
+    <option name="y" value="458" />
+    <option name="width" value="1934" />
+    <option name="height" value="1037" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -329,6 +332,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,6 +351,13 @@
               <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
               <item name="out" type="462c0819:PsiDirectoryNode" />
               <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="skst_meteor_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
@@ -379,6 +391,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+              <item name="udp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -388,27 +409,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="enumerate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="response" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
@@ -458,45 +459,6 @@
               <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="Mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="redis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="redis" type="462c0819:PsiDirectoryNode" />
-              <item name="annotate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -518,14 +480,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -535,17 +489,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skstmeteor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skstmeteor" type="b2602c69:ProjectViewProjectNode" />
@@ -562,13 +506,69 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="safeproving" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skstmeteor" type="1abcf292:AndroidViewProjectNode" />
+              <item name="skst-meteor" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="utiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="MessgaeTypeEnum&#9;FILE&#9;file://E:/skstmeteor/src/main/java/db/mysql/entity/MessgaeTypeEnum.java&#10;TrendsEntity&#9;FILE&#9;file://E:/skstmeteor/src/main/java/db/mysql/entity/TrendsEntity.java&#10;UserFollowEntity&#9;PSI&#9;JAVA://db.mysql.entity.UserFollowEntity&#10;SendTrendsController&#9;FILE&#9;file://E:/skstmeteor/src/main/java/controller/SendTrendsController.java" />
+    <property name="AnalyzeApkAction.lastApkPath" value="$USER_HOME$/Desktop" />
+    <property name="SearchEverywhereHistoryKey" value="UserInfoEntity&#9;PSI&#9;JAVA://db.mysql.entity.UserInfoEntity&#10;RedisListStructure&#9;FILE&#9;file://E:/skstmeteor/src/main/java/db/redis/RedisListStructure.java&#10;test&#9;PSI&#9;JAVA://db.mysql.provider.MessageSendProviderMapperTest&#10;UDP&#9;PSI&#9;JAVA://sun.security.krb5.internal.UDPClient&#10;RedisConnect&#9;PSI&#9;JAVA://db.redis.RedisConnect&#10;sess&#9;PSI&#9;JAVA://db.redis.SessionString&#10;MessgaeTypeEnum&#9;FILE&#9;file://E:/skstmeteor/src/main/java/db/mysql/entity/MessgaeTypeEnum.java&#10;TrendsEntity&#9;FILE&#9;file://E:/skstmeteor/src/main/java/db/mysql/entity/TrendsEntity.java&#10;UserFollowEntity&#9;PSI&#9;JAVA://db.mysql.entity.UserFollowEntity&#10;SendTrendsController&#9;FILE&#9;file://E:/skstmeteor/src/main/java/controller/SendTrendsController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -576,7 +576,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="db.mysql.provider.DBProviderTestBase" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -586,11 +586,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="db.redis" />
       <recent name="adapter" />
       <recent name="db.mysql.provider" />
       <recent name="controller" />
       <recent name="db.redis.annotate" />
-      <recent name="db.mysql" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="db.mysql.provider.DBProviderTestBase" />
@@ -606,15 +606,16 @@
       <recent name="db.redis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
       <recent name="db.redis.annotate" />
       <recent name="utiles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\skstmeteor\src\main\java\bean\json\request" />
       <recent name="E:\skstmeteor\src\main\java\db\mysql\Mapper" />
       <recent name="E:\skstmeteor\src\main\resources" />
       <recent name="E:\skstmeteor\src\main\java\db\mysql" />
       <recent name="E:\skstmeteor\src\main\java\bean" />
-      <recent name="E:\skstmeteor\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -640,19 +641,19 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="MessageSyncProviderMapperTest.queryMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnLineListTest.getUserInfoList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skst-meteor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="db.mysql.provider.*" />
+          <option name="PATTERN" value="db.redis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="db.mysql.provider" />
-      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.MessageSyncProviderMapperTest" />
-      <option name="METHOD_NAME" value="queryMessage" />
+      <option name="PACKAGE_NAME" value="db.redis" />
+      <option name="MAIN_CLASS_NAME" value="db.redis.OnLineListTest" />
+      <option name="METHOD_NAME" value="getUserInfoList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -663,19 +664,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TrendsSendProviderMapperTest.testSendTrendsContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OnLineListTest.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skst-meteor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="db.mysql.provider.*" />
+          <option name="PATTERN" value="db.redis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="db.mysql.provider" />
-      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.TrendsSendProviderMapperTest" />
-      <option name="METHOD_NAME" value="testSendTrendsContent" />
+      <option name="PACKAGE_NAME" value="db.redis" />
+      <option name="MAIN_CLASS_NAME" value="db.redis.OnLineListTest" />
+      <option name="METHOD_NAME" value="testDate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -686,20 +687,43 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TrendsSyncProviderBaseMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test11.main11 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skst-meteor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="db.mysql.provider.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="db.mysql.provider" />
-      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.TrendsSyncProviderBaseMapperTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.Test11" />
+      <option name="METHOD_NAME" value="main11([Ljava.lang.String;)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Test11.main11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skst-meteor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.Test11" />
+      <option name="METHOD_NAME" value="main11" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -755,7 +779,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserInfoSyncProviderTest.testGetMessageUserInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserInfoSyncProviderTest.testQueryOtherUserInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skst-meteor" />
       <extension name="coverage">
         <pattern>
@@ -767,30 +791,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="db.mysql.provider" />
       <option name="MAIN_CLASS_NAME" value="db.mysql.provider.UserInfoSyncProviderTest" />
-      <option name="METHOD_NAME" value="testGetMessageUserInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="UserInfoSyncProviderTest.testGetUserInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skst-meteor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="db.mysql.provider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="db.mysql.provider" />
-      <option name="MAIN_CLASS_NAME" value="db.mysql.provider.UserInfoSyncProviderTest" />
-      <option name="METHOD_NAME" value="testGetUserInfo" />
+      <option name="METHOD_NAME" value="testQueryOtherUserInfo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -843,19 +844,19 @@
       <item itemvalue="Application.StartServer" />
       <item itemvalue="JUnit.UserInfoSendProviderTest" />
       <item itemvalue="JUnit.UserFollowSyncProviderTest" />
-      <item itemvalue="JUnit.MessageSyncProviderMapperTest.queryMessage" />
-      <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest" />
-      <item itemvalue="JUnit.TrendsSendProviderMapperTest.testSendTrendsContent" />
-      <item itemvalue="JUnit.UserInfoSyncProviderTest.testGetMessageUserInfo" />
-      <item itemvalue="JUnit.UserInfoSyncProviderTest.testGetUserInfo" />
+      <item itemvalue="JUnit.Test11.main11" />
+      <item itemvalue="JUnit.Test11.main11 (1)" />
+      <item itemvalue="JUnit.UserInfoSyncProviderTest.testQueryOtherUserInfo" />
+      <item itemvalue="JUnit.OnLineListTest.testDate" />
+      <item itemvalue="JUnit.OnLineListTest.getUserInfoList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserInfoSyncProviderTest.testGetUserInfo" />
-        <item itemvalue="JUnit.UserInfoSyncProviderTest.testGetMessageUserInfo" />
-        <item itemvalue="JUnit.MessageSyncProviderMapperTest.queryMessage" />
-        <item itemvalue="JUnit.TrendsSyncProviderBaseMapperTest" />
-        <item itemvalue="JUnit.TrendsSendProviderMapperTest.testSendTrendsContent" />
+        <item itemvalue="JUnit.OnLineListTest.getUserInfoList" />
+        <item itemvalue="JUnit.OnLineListTest.testDate" />
+        <item itemvalue="JUnit.UserInfoSyncProviderTest.testQueryOtherUserInfo" />
+        <item itemvalue="JUnit.Test11.main11" />
+        <item itemvalue="JUnit.Test11.main11 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -886,44 +887,49 @@
       <workItem from="1550571175852" duration="29302000" />
       <workItem from="1550831293145" duration="23660000" />
       <workItem from="1551188950958" duration="691000" />
-      <workItem from="1551189802276" duration="109695000" />
+      <workItem from="1551189802276" duration="115076000" />
+      <workItem from="1553213083239" duration="27707000" />
+      <workItem from="1553431338271" duration="12677000" />
+      <workItem from="1553580095244" duration="4785000" />
+      <workItem from="1554093532984" duration="48028000" />
+      <workItem from="1554942700447" duration="63592000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TrendsSyncProviderBaseMapperTest_testFlushTrends - 2019.03.07 at 00h 55m 18s.xml">
-      <configuration name="TrendsSyncProviderBaseMapperTest.testFlushTrends" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 51m 50s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrendsSendProviderMapperTest_testSendTrendsContent - 2019.03.07 at 00h 56m 48s.xml">
-      <configuration name="TrendsSendProviderMapperTest.testSendTrendsContent" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 52m 01s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrendsSyncProviderBaseMapperTest - 2019.03.07 at 00h 57m 11s.xml">
-      <configuration name="TrendsSyncProviderBaseMapperTest" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 52m 29s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MessageSyncProviderMapperTest_queryMessage - 2019.03.07 at 11h 53m 08s.xml">
-      <configuration name="MessageSyncProviderMapperTest.queryMessage" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 52m 55s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetMessageUserInfo - 2019.03.07 at 13h 21m 40s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetMessageUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 53m 36s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetMessageUserInfo - 2019.03.07 at 13h 23m 01s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetMessageUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 55m 14s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetMessageUserInfo - 2019.03.07 at 13h 50m 40s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetMessageUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.24 at 23h 55m 31s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetUserInfo - 2019.03.07 at 13h 52m 02s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.25 at 00h 00m 03s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetUserInfo - 2019.03.07 at 13h 53m 03s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.25 at 00h 00m 43s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserInfoSyncProviderTest_testGetUserInfo - 2019.03.07 at 13h 59m 44s.xml">
-      <configuration name="UserInfoSyncProviderTest.testGetUserInfo" configurationId="JUnit" />
+    <history-entry file="OnLineListTest_getUserInfoList - 2019.03.25 at 00h 01m 14s.xml">
+      <configuration name="OnLineListTest.getUserInfoList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482258000" />
+    <option name="totallyTimeSpent" value="644428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,7 +942,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="0" />
       <window_info anchor="right" id="Palette" order="1" />
@@ -945,63 +950,65 @@
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="2" sideWeight="0.39562625" visible="true" weight="0.19571045" />
+      <window_info anchor="right" id="Database" order="2" sideWeight="0.43942994" visible="true" weight="0.1930295" />
       <window_info id="Structure" order="1" sideWeight="0.20493828" side_tool="true" weight="0.24463807" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.43651927" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32905984" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.5235378" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3281027" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3067047" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.26676178" />
-      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.31669044" />
+      <window_info active="true" anchor="bottom" id="Run" order="13" visible="true" weight="0.41084164" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.49500713" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.56057006" side_tool="true" weight="0.1930295" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.31669044" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.403709" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.60437375" visible="true" weight="0.2419571" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60437375" visible="true" weight="0.23659517" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3281027" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="4" sideWeight="0.5014245" side_tool="true" weight="0.21447721" />
+      <window_info anchor="bottom" id="REST Client" order="4" sideWeight="0.49865952" weight="0.2735043" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="REST Client" order="4" sideWeight="0.49865952" weight="0.2735043" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="PlantUML" order="0" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.403709" />
+      <window_info anchor="right" id="PlantUML" order="1" />
       <window_info anchor="bottom" id="REST Client" order="4" sideWeight="0.49865952" weight="0.2735043" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.33238232" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.2981455" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.43509272" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5014245" side_tool="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.31669044" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5013405" side_tool="true" weight="0.3666191" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3067047" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info id="Image Layers" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.26676178" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.3297587" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.49500713" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3297587" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3281027" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7940447" visible="true" weight="0.2419571" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.12600537" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60437375" visible="true" weight="0.23659517" />
+      <window_info active="true" anchor="right" id="Database" order="3" sideWeight="0.43942994" visible="true" weight="0.1930295" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32905984" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3281027" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.20493828" side_tool="true" weight="0.24463807" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.45791727" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.56057006" side_tool="true" weight="0.1930295" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49865952" weight="0.29529244" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1040,12 +1047,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/redis/RedisBase.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/adapter/Distribute.java</url>
           <line>47</line>
           <properties />
@@ -1058,44 +1059,49 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/redis/annotate/MyJedisAnalyze.java</url>
-          <line>156</line>
+          <url>file://$PROJECT_DIR$/src/main/java/db/redis/OnLineList.java</url>
+          <line>45</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/redis/annotate/MyJedisAnalyze.java</url>
-          <line>137</line>
+          <url>file://$PROJECT_DIR$/src/main/java/controller/SendMessage.java</url>
+          <line>40</line>
           <properties />
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adapter/Distribute.java</url>
-          <line>35</line>
+          <url>file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/udp/UdpListener.java</url>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="68" />
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adapter/MappingLoading.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncFindInfo.java</url>
+          <line>31</line>
           <properties />
-          <option name="timeStamp" value="69" />
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adapter/MappingLoading.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java</url>
+          <url>file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java</url>
           <line>34</line>
           <properties />
-          <option name="timeStamp" value="74" />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="102" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="json" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
@@ -1103,6 +1109,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>json</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>fillData</expression-string>
         <language-id>JAVA</language-id>
@@ -1116,330 +1127,278 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/controller/SyncTrendsControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessgaeTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="30" column="85" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="85" />
+        <state relative-caret-position="101">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/MysqlBaseTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/DatagramPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="176">
+          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/TrendsSendProviderMapperTest.java">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/udp/SyncMessageUdp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/TrendsSyncProviderBaseMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/MysqlBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SendTrendsBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="125">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding>
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/SessionString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSendProviderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/RedisBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="106" column="18" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/FunctionEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/safeproving/Safe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-611">
-          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-          <folding>
-            <element signature="e#2092#2093#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/AdapterResponseBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendTrendsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/UserInfoEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/TrendsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessageEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        <state relative-caret-position="300">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/SqlSession.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="125">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/resources/mapping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/exceptions/ExceptionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/controller/SyncMessageRequestBeanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/MessageSyncMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/UserInfoSyncProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="64" lean-forward="true" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/UserInfoSyncProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_info_mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/MessageSendProviderMapper.java">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/RedisMessageEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="31" column="44" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SyncMessageRequestBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/db/mysql/provider/MessageSyncProviderMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/UserInfoEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="94" column="40" lean-forward="true" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/trends_mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/MessageSyncProviderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="237">
+          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="120" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessgaeTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/MessageSyncMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="100">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7989833b-71a5-4171-9d65-e783ea4eef01/console.sql">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/MysqlBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="96">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_info.sql">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/StartServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state relative-caret-position="101">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_chat_message.sql">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SyncFindInfoRequestBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="50">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_follow">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/MessageSendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/AdapterRequestBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/test/java/controller/SendTrendsControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_follow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/user_info_mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/message_mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/MessageEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncFindInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/mapping.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/udp/UdpListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="108" column="42" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/udp/SyncMessageResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/MessageInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/AdapterI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendTrendsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SyncTrendsBean.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/conf/ProjectResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/SyncMessageRequestBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SafeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SendMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/MappingLoading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/Distribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/redis/RedisBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/safeproving/Safe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#2154#2155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1450,17 +1409,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_chat_message">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/request/SendMessageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectPool.java">
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/request/UserInfoRequestBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="275">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/user/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/OtherUserInfoQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1061">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/entity/UserInfoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/ConnectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/controller/SyncTrendsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/provider/TrendsSyncProviderBaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="48" column="99" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7989833b-71a5-4171-9d65-e783ea4eef01/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="148" selection-start-line="37" selection-start-column="148" selection-end-line="37" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/db/mysql/Mapper/trends_mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
@@ -1471,49 +1493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/response/MessageResponseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/bean/json/enumerate/FollowState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/MappingLoading.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/mapping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../skstmeteor/src/main/java/adapter/Distribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="29" />
+    <entry file="das://7989833b-71a5-4171-9d65-e783ea4eef01/schema/meteor/table/user_chat_message">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,8 @@
         <typeAlias type="db.mysql.entity.UserFollowEntity" alias="UserFollowEntity"/>
         <typeAlias type="db.mysql.entity.MessageEntity" alias="MessageEntity"/>
         <typeAlias type="db.mysql.entity.RedisMessageEntity" alias="RedisMessageEntity"/>
+        <typeAlias type="bean.json.request.SendMessageBean" alias="SendMessageBean"/>
+        <typeAlias type="db.mysql.entity.OtherUserInfoQuery" alias="OtherUserInfoQuery"/>
     </typeAliases>
 
     <typeHandlers>

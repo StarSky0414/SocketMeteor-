@@ -1,38 +1,40 @@
 import adapter.ConnectListener;
 import adapter.ConnectPool;
+import adapter.MessageInit;
+import adapter.udp.UdpListener;
 import db.mysql.MysqlBase;
+import db.mysql.entity.MessageEntity;
+import db.mysql.entity.RedisMessageEntity;
+import org.apache.ibatis.session.SqlSession;
 
 import java.io.*;
 import java.net.Socket;
 
 
 public class StartServer {
+
+
     public static void main(String[] args) throws IOException, InterruptedException {
         MysqlBase.init();
+        MessageInit.messageInit();
+        System.out.println("消息数初始化结束    ======"+MessageInit.getMessageNum());
+
+        new Thread(new UdpListener()).start();
         //初始化线程池
 
-//        new Thread(new Runnable() {
-//            public void run() {
         try {
-                    ConnectPool.init();
-                    ConnectListener connectListener = new ConnectListener();
-                    connectListener.listen();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-//            }
-//        }).start();
-//
-//        for (int i=0 ;i<15;i++) {
-//            Socket socket = new Socket("127.0.0.1", 8088);
-//            InputStream inputStream = socket.getInputStream();
-//            String result = new BufferedReader(new InputStreamReader(inputStream)).readLine();
-//            System.out.println(result);
-//            socket.shutdownInput();S
-//            socket.close();
-//            System.out.println(socket.isClosed());
-////            Thread.sleep(1000);
-//        }
+            ConnectPool.init();
+            ConnectListener connectListener = new ConnectListener();
+            connectListener.listen();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
+
+
+
+
+
 }
+

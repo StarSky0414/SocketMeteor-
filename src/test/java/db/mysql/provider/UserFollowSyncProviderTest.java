@@ -31,7 +31,7 @@ class UserFollowSyncProviderTest extends DBProviderTestBase {
     }
 
     @Override
-    void init() {
+    protected void init() {
         userFollowSyncProvider = new UserFollowSyncProvider();
     }
 }
